@@ -1,0 +1,16 @@
+{
+  "scenario": "urban_expansion",
+  "title": "Peri-Urban Expansion \u2014 Agricultural Land Conversion",
+  "location": "Hyderabad Fringe, Telangana (synthetic)",
+  "timestamp_t1": "2021-06-01",
+  "timestamp_t2": "2023-11-01",
+  "sensor": "optical",
+  "sensor_label": "Cartosat-2S MSS (synthetic)",
+  "query_hint": "urban growth",
+  "expected": {
+    "primary_index": "ndbi",
+    "change_direction": "urban_growth",
+    "approx_area_m2": 85504.0
+  },
+  "description": "Simulates rapid peri-urban growth: farmland converted to a large housing colony (116 px \u00d7 136 px) and an industrial estate (70\u00d780 px) with a new road network between 2021 and 2023. Query this scenario with: 'Has new urban development occurred here?'"
+}
