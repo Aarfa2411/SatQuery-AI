@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SatQuery AI — Agentic Earth Observation Copilot (SIH26167)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <header class="app-header">
+        <div class="logo-area">
+            <div class="logo-badge">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="9"></circle>
+                    <path d="M12 3v18"></path>
+                    <path d="M3 12h18"></path>
+                    <circle cx="12" cy="12" r="4" fill="currentColor" opacity="0.3"></circle>
+                </svg>
+            </div>
+            <div>
+                <h1>SatQuery AI</h1>
+                <span class="sub-tag">Agentic Remote-Sensing Intelligence Copilot · ISRO SIH26167</span>
+            </div>
+        </div>
+        <div class="header-status">
+            <span class="sensor-badge" id="sensorBadge">ISRO Earth-Observation Standard</span>
+            <span class="mode-badge" id="modeBadge">Active Mode: Heuristic / Auto</span>
+        </div>
+    </header>
+
+    <main class="app-layout">
+        <!-- Left Panel: Ingestion & Chat -->
+        <section class="chat-panel">
+            <div class="card upload-card">
+                <h3>1. Ingestion & Co-Registration</h3>
+                <div class="upload-dropzone" id="dropzone">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                    <p>Upload GeoTIFFs (Single, Bi-temporal, or Optical+SAR)</p>
+                    <span class="upload-hint">Auto-checks CRS, bounds overlap, and erodes warp border artifacts</span>
+                    <input type="file" id="fileInput" multiple accept=".tif,.tiff,.png,.jpg" style="display:none;">
+                </div>
+                <div class="validation-status" id="validationStatus">
+                    <span class="status-dot"></span> <span id="validationText">No imagery loaded. Using simulated Cartosat-2S & RISAT demo session.</span>
+                </div>
+            </div>
+
+            <div class="card chat-card">
+                <h3>2. Conversational Satellite Intelligence</h3>
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message system-message">
+                        <strong>SatQuery Assistant:</strong> Welcome! Upload your satellite imagery or ask any Earth-observation question below.
+                    </div>
+                </div>
+
+                <form id="queryForm" class="query-form">
+                    <input type="text" id="queryInput" placeholder="e.g. 'Use optical and SAR to identify flood inundation and new buildings'" required>
+                    <button type="submit" id="submitBtn">
+                        <span>Investigate</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </form>
+
+                <div class="quick-prompts">
+                    <button class="pill-btn" onclick="setPrompt('Describe the land cover and major objects visible in this image.')">Describe Land Cover</button>
+                    <button class="pill-btn" onclick="setPrompt('What changed between T1 and T2? Suppress seasonal pseudo-changes.')">Bi-Temporal Change</button>
+                    <button class="pill-btn" onclick="setPrompt('Assess ground inundation with SAR microwave penetration through cloud cover.')">Optical + SAR Fusion</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Center Panel: Map & Comparison Slider -->
+        <section class="map-panel card">
+            <div class="panel-header">
+                <h3>Visual Evidence & Grounded Overlays</h3>
+                <div class="map-controls">
+                    <button class="toggle-btn active" id="btnOverlay">Mask Overlays</button>
+                    <button class="toggle-btn" id="btnSlider">Before/After Slider</button>
+                </div>
+            </div>
+            
+            <div id="mapContainer" class="map-container">
+                <div class="simulated-map" id="simulatedMap">
+                    <div class="map-layer optical-layer" id="layerT1">
+                        <div class="water-box" id="waterOverlay"></div>
+                        <div class="change-box" id="changeOverlay"></div>
+                        <div class="urban-box" id="urbanOverlay"></div>
+                    </div>
+                    <div class="map-slider-handle" id="sliderHandle"></div>
+                </div>
+            </div>
+
+            <div class="export-bar">
+                <div class="hash-display">
+                    <span class="hash-label">Run Signature (SHA-256):</span>
+                    <span class="hash-val" id="sigHash">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</span>
+                </div>
+                <div class="export-actions">
+                    <button class="export-btn" id="btnExportPdf">Export PDF Report</button>
+                    <button class="export-btn secondary" id="btnExportGeoJson">Export GeoJSON</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Panel: ReAct Investigation Trace Drawer -->
+        <aside class="trace-panel card">
+            <div class="panel-header">
+                <h3>Auditable Investigation Trace</h3>
+                <span class="badge-confidence" id="finalConfidence">Confidence: --%</span>
+            </div>
+            <p class="trace-sub">Step-by-step ReAct thought, tool selection rationale, and observation evidence.</p>
+            
+            <div class="trace-steps" id="traceSteps">
+                <div class="trace-empty">No active query execution trace. Ask a question to view real-time ReAct planning.</div>
+            </div>
+        </aside>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
