@@ -1,0 +1,16 @@
+{
+  "scenario": "deforestation",
+  "title": "Selective Logging \u2014 Western Ghats Forest Edge",
+  "location": "Western Ghats, Karnataka (synthetic)",
+  "timestamp_t1": "2022-12-01",
+  "timestamp_t2": "2023-03-15",
+  "sensor": "optical",
+  "sensor_label": "Cartosat-2S MSS (synthetic)",
+  "query_hint": "deforestation",
+  "expected": {
+    "primary_index": "ndvi",
+    "change_direction": "vegetation_loss",
+    "approx_area_m2": 47200.0
+  },
+  "description": "Simulates three selective logging clearance events plus access tracks on a forested hillside. Dense tropical forest (NDVI\u22480.75) is replaced by bare soil (NDVI\u22480.05) within the cleared patches. Query this scenario with: 'Where has forest cover decreased?'"
+}

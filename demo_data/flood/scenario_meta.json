@@ -1,0 +1,16 @@
+{
+  "scenario": "flood_inundation",
+  "title": "Cyclone Flood Inundation \u2014 River Delta",
+  "location": "Bay of Bengal Coast, Odisha (synthetic)",
+  "timestamp_t1": "2023-10-10",
+  "timestamp_t2": "2023-10-12",
+  "sensor": "optical",
+  "sensor_label": "Cartosat-2S MSS (synthetic)",
+  "query_hint": "flood",
+  "expected": {
+    "primary_index": "ndwi",
+    "change_direction": "water_expansion",
+    "approx_area_m2": 78240.0
+  },
+  "description": "Simulates the 2023 cyclone-driven coastal flooding scenario. The river channel expands from 40 m to 240 m width, inundating surrounding paddy fields and coastal settlements. Query this scenario with: 'Has there been flooding between T1 and T2?'"
+}
