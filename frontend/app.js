@@ -633,6 +633,10 @@ btnBackToOrbit.addEventListener("click", () => {
 
     landingView.classList.remove("landing-exit");
     isZooming = false;
+    currentCamZ.val = 10;
+    if (camera) camera.position.z = 10;
+    currentPos.set(0, 0, 0);
+    currentScale.val = 1.0;
     btnEnterExperience.disabled = false;
     telemetryDrawer.classList.remove("active");
     telemetryProgressBar.style.width = "0%";

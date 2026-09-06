@@ -62,7 +62,8 @@ html, body {
 .landing-view.landing-exit {
     opacity: 0;
     transform: scale(1.06);
-    pointer-events: none;
+    pointer-events: none !important;
+    visibility: hidden;
 }
 
 /* 3D WebGL Canvas Container */
