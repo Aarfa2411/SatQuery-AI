@@ -1,0 +1,35 @@
+{
+  "task_id": "DEMO-ACT1-SINGLE-OPTICAL",
+  "schema_version": "0.2",
+  "status": "real_model",
+  "text_response": "High-resolution optical scene analysis completed. Identified 8 industrial storage tanks and warehouse facilities. Bounding footprint delineated covering 4.82 ha with 91.4% confidence.",
+  "deterministic_numbers": {
+    "feature_count": 8.0,
+    "area_ha": 4.82,
+    "area_m2": 48200.0
+  },
+  "geojson_geometry": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {"name": "Industrial Complex A", "area_ha": 4.82},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[76.512, 12.845], [76.518, 12.845], [76.518, 12.851], [76.512, 12.851], [76.512, 12.845]]]
+        }
+      }
+    ]
+  },
+  "confidence_score": 0.914,
+  "confidence_breakdown": {
+    "input_quality": 0.96,
+    "model_confidence": 0.92,
+    "evidence_agreement": 0.94,
+    "geospatial_validity": 1.0,
+    "temporal_validity": 1.0,
+    "contradiction_penalty": 0.0
+  },
+  "execution_time_ms": 142.5,
+  "tool_trace": ["GeoValidator", "optical_vlm.grounding", "vector_ops.delineate"]
+}

@@ -1,0 +1,31 @@
+{
+  "cache_version": "0.2",
+  "name": "SatQuery AI 3-Act Demo Offline Fallback Bundle",
+  "purpose": "Protects against live venue stage failures (Wi-Fi drop, GPU OOM, cold-start latency). Provides <2s verified responses.",
+  "acts": [
+    {
+      "act": 1,
+      "title": "Act 1: Single-Image Intelligence",
+      "query": "Identify and ground industrial storage facilities and delineate building footprints.",
+      "cache_file": "act1_single_image.json",
+      "modality": "optical",
+      "verified_confidence": 0.914
+    },
+    {
+      "act": 2,
+      "title": "Act 2: Temporal Change Intelligence",
+      "query": "Analyze vegetation loss and calculate deforested area between 2023 and 2024.",
+      "cache_file": "act2_bitemporal_change.json",
+      "modality": "bitemporal",
+      "verified_confidence": 0.884
+    },
+    {
+      "act": 3,
+      "title": "Act 3: Multimodal Killer Investigation",
+      "query": "Cloud-covered flood event: fuse Optical T1/T2 with Sentinel-1 SAR penetration and show why.",
+      "cache_file": "act3_multimodal_investigation.json",
+      "modality": "optical_sar_fused",
+      "verified_confidence": 0.862
+    }
+  ]
+}

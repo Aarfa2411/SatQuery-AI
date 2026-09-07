@@ -1,0 +1,51 @@
+{
+  "task_id": "DEMO-ACT2-TEMPORAL-CHANGE",
+  "schema_version": "0.2",
+  "status": "classical_algorithm",
+  "text_response": "Bi-temporal NDVI differencing with STSF-Net pseudo-change suppression detected significant vegetation loss between 2023-01-15 and 2024-01-15. Total deforested area is 14.20 ha (11.50% of tile area) across 4 contiguous clusters. Bimodal Otsu confidence separation score is 0.884 (High).",
+  "deterministic_numbers": {
+    "area_ha": 14.20,
+    "area_m2": 142000.0,
+    "change_pct": 11.50,
+    "cluster_count": 4.0
+  },
+  "geojson_geometry": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {"cluster_id": 1, "area_ha": 8.4, "change_type": "Deforestation"},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[76.530, 12.860], [76.540, 12.860], [76.540, 12.870], [76.530, 12.870], [76.530, 12.860]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {"cluster_id": 2, "area_ha": 5.8, "change_type": "Deforestation"},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[76.545, 12.875], [76.552, 12.875], [76.552, 12.882], [76.545, 12.882], [76.545, 12.875]]]
+        }
+      }
+    ]
+  },
+  "confidence_score": 0.884,
+  "confidence_breakdown": {
+    "input_quality": 0.94,
+    "model_confidence": 0.88,
+    "evidence_agreement": 0.92,
+    "geospatial_validity": 1.0,
+    "temporal_validity": 0.98,
+    "contradiction_penalty": 0.0
+  },
+  "execution_time_ms": 115.0,
+  "tool_trace": [
+    "GeoValidator",
+    "indices.compute_ndvi_diff",
+    "detector.stsf_pseudo_filter",
+    "morphology.clean_mask",
+    "metrics.compute_area",
+    "confidence.compute_bimodal_separation"
+  ]
+}

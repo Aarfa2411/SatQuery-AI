@@ -1,0 +1,3610 @@
+{
+  "manifest_version": "0.2",
+  "benchmark_name": "SatQuery-Bench Phase-1",
+  "total_items": 150,
+  "categories_count": 10,
+  "items_per_category": 15,
+  "license_compliance": "All datasets strictly open access under Copernicus CC-BY 4.0 / USGS Public Domain / Research Benchmarks",
+  "items": [
+    {
+      "item_id": "SQB-SCEN-001",
+      "category": "scene_description",
+      "modality": "optical",
+      "input_query": "Describe the predominant land cover and features in this optical tile. (Sample #1)",
+      "dataset_source": "BigEarthNet-MM (Sentinel-2)",
+      "scene_references": {
+        "scene_id": "scene_description_scene_001",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.51,
+          12.81,
+          76.61,
+          12.91
+        ]
+      },
+      "ground_truth": {
+        "target_class": "scene_description_class_1",
+        "expected_number": 11.5,
+        "unit": "pct",
+        "expected_confidence": 0.86
+      }
+    },
+    {
+      "item_id": "SQB-SCEN-002",
+      "category": "scene_description",
+      "modality": "optical",
+      "input_query": "Describe the predominant land cover and features in this optical tile. (Sample #2)",
+      "dataset_source": "BigEarthNet-MM (Sentinel-2)",
+      "scene_references": {
+        "scene_id": "scene_description_scene_002",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.52,
+          12.82,
+          76.61999999999999,
+          12.92
+        ]
+      },
+      "ground_truth": {
+        "target_class": "scene_description_class_2",
+        "expected_number": 13.0,
+        "unit": "pct",
+        "expected_confidence": 0.87
+      }
+    },
+    {
+      "item_id": "SQB-SCEN-003",
+      "category": "scene_description",
+      "modality": "optical",
+      "input_query": "Describe the predominant land cover and features in this optical tile. (Sample #3)",
+      "dataset_source": "BigEarthNet-MM (Sentinel-2)",
+      "scene_references": {
+        "scene_id": "scene_description_scene_003",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.53,
+          12.83,
+          76.63,
+          12.93
+        ]
+      },
+      "ground_truth": {
+        "target_class": "scene_description_class_0",
+        "expected_number": 14.5,
+        "unit": "pct",
+        "expected_confidence": 0.88
+      }
+    },
+    {
+      "item_id": "SQB-SCEN-004",
+      "category": "scene_description",
+      "modality": "optical",
+      "input_query": "Describe the predominant land cover and features in this optical tile. (Sample #4)",
+      "dataset_source": "BigEarthNet-MM (Sentinel-2)",
+      "scene_references": {
+        "scene_id": "scene_description_scene_004",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.54,
+          12.84,
+          76.64,
+          12.94
+        ]
+      },
+      "ground_truth": {
+        "target_class": "scene_description_class_1",
+        "expected_number": 16.0,
+        "unit": "pct",
+        "expected_confidence": 0.89
+      }
+    },
+    {
+      "item_id": "SQB-SCEN-005",
+      "category": "scene_description",
+      "modality": "optical",
+      "input_query": "Describe the predominant land cover and features in this optical tile. (Sample #5)",
+      "dataset_source": "BigEarthNet-MM (Sentinel-2)",
+      "scene_references": {
+        "scene_id": "scene_description_scene_005",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.55,
+          12.850000000000001,
+          76.64999999999999,
+          12.950000000000001
+        ]
+      },
+      "ground_truth": {
+        "target_class": "scene_description_class_2",
+        "expected_number": 17.5,
+        "unit": "pct",
+        "expected_confidence": 0.9
+      }
+    },
+    {
+      "item_id": "SQB-SCEN-006",
+      "category": "scene_description",
+      "modality": "optical",
+      "input_query": "Describe the predominant land cover and features in this optical tile. (Sample #6)",
+      "dataset_source": "BigEarthNet-MM (Sentinel-2)",
+      "scene_references": {
+        "scene_id": "scene_description_scene_006",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.56,
+          12.860000000000001,
+          76.66,
+          12.96
+        ]
+      },
+      "ground_truth": {
+        "target_class": "scene_description_class_0",
+        "expected_number": 19.0,
+        "unit": "pct",
+        "expected_confidence": 0.9099999999999999
+      }
+    },
+    {
+      "item_id": "SQB-SCEN-007",
+      "category": "scene_description",
+      "modality": "optical",
+      "input_query": "Describe the predominant land cover and features in this optical tile. (Sample #7)",
+      "dataset_source": "BigEarthNet-MM (Sentinel-2)",
+      "scene_references": {
+        "scene_id": "scene_description_scene_007",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.57,
+          12.870000000000001,
+          76.66999999999999,
+          12.97
+        ]
+      },
+      "ground_truth": {
+        "target_class": "scene_description_class_1",
+        "expected_number": 20.5,
+        "unit": "pct",
+        "expected_confidence": 0.9199999999999999
+      }
+    },
+    {
+      "item_id": "SQB-SCEN-008",
+      "category": "scene_description",
+      "modality": "optical",
+      "input_query": "Describe the predominant land cover and features in this optical tile. (Sample #8)",
+      "dataset_source": "BigEarthNet-MM (Sentinel-2)",
+      "scene_references": {
+        "scene_id": "scene_description_scene_008",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.58,
+          12.88,
+          76.67999999999999,
+          12.98
+        ]
+      },
+      "ground_truth": {
+        "target_class": "scene_description_class_2",
+        "expected_number": 22.0,
+        "unit": "pct",
+        "expected_confidence": 0.9299999999999999
+      }
+    },
+    {
+      "item_id": "SQB-SCEN-009",
+      "category": "scene_description",
+      "modality": "optical",
+      "input_query": "Describe the predominant land cover and features in this optical tile. (Sample #9)",
+      "dataset_source": "BigEarthNet-MM (Sentinel-2)",
+      "scene_references": {
+        "scene_id": "scene_description_scene_009",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.59,
+          12.89,
+          76.69,
+          12.99
+        ]
+      },
+      "ground_truth": {
+        "target_class": "scene_description_class_0",
+        "expected_number": 23.5,
+        "unit": "pct",
+        "expected_confidence": 0.94
+      }
+    },
+    {
+      "item_id": "SQB-SCEN-010",
+      "category": "scene_description",
+      "modality": "optical",
+      "input_query": "Describe the predominant land cover and features in this optical tile. (Sample #10)",
+      "dataset_source": "BigEarthNet-MM (Sentinel-2)",
+      "scene_references": {
+        "scene_id": "scene_description_scene_010",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.6,
+          12.9,
+          76.69999999999999,
+          13.0
+        ]
+      },
+      "ground_truth": {
+        "target_class": "scene_description_class_1",
+        "expected_number": 25.0,
+        "unit": "pct",
+        "expected_confidence": 0.85
+      }
+    },
+    {
+      "item_id": "SQB-SCEN-011",
+      "category": "scene_description",
+      "modality": "optical",
+      "input_query": "Describe the predominant land cover and features in this optical tile. (Sample #11)",
+      "dataset_source": "BigEarthNet-MM (Sentinel-2)",
+      "scene_references": {
+        "scene_id": "scene_description_scene_011",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.61,
+          12.91,
+          76.71,
+          13.01
+        ]
+      },
+      "ground_truth": {
+        "target_class": "scene_description_class_2",
+        "expected_number": 26.5,
+        "unit": "pct",
+        "expected_confidence": 0.86
+      }
+    },
+    {
+      "item_id": "SQB-SCEN-012",
+      "category": "scene_description",
+      "modality": "optical",
+      "input_query": "Describe the predominant land cover and features in this optical tile. (Sample #12)",
+      "dataset_source": "BigEarthNet-MM (Sentinel-2)",
+      "scene_references": {
+        "scene_id": "scene_description_scene_012",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.62,
+          12.92,
+          76.72,
+          13.02
+        ]
+      },
+      "ground_truth": {
+        "target_class": "scene_description_class_0",
+        "expected_number": 28.0,
+        "unit": "pct",
+        "expected_confidence": 0.87
+      }
+    },
+    {
+      "item_id": "SQB-SCEN-013",
+      "category": "scene_description",
+      "modality": "optical",
+      "input_query": "Describe the predominant land cover and features in this optical tile. (Sample #13)",
+      "dataset_source": "BigEarthNet-MM (Sentinel-2)",
+      "scene_references": {
+        "scene_id": "scene_description_scene_013",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.63,
+          12.930000000000001,
+          76.72999999999999,
+          13.030000000000001
+        ]
+      },
+      "ground_truth": {
+        "target_class": "scene_description_class_1",
+        "expected_number": 29.5,
+        "unit": "pct",
+        "expected_confidence": 0.88
+      }
+    },
+    {
+      "item_id": "SQB-SCEN-014",
+      "category": "scene_description",
+      "modality": "optical",
+      "input_query": "Describe the predominant land cover and features in this optical tile. (Sample #14)",
+      "dataset_source": "BigEarthNet-MM (Sentinel-2)",
+      "scene_references": {
+        "scene_id": "scene_description_scene_014",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.64,
+          12.940000000000001,
+          76.74,
+          13.040000000000001
+        ]
+      },
+      "ground_truth": {
+        "target_class": "scene_description_class_2",
+        "expected_number": 31.0,
+        "unit": "pct",
+        "expected_confidence": 0.89
+      }
+    },
+    {
+      "item_id": "SQB-SCEN-015",
+      "category": "scene_description",
+      "modality": "optical",
+      "input_query": "Describe the predominant land cover and features in this optical tile. (Sample #15)",
+      "dataset_source": "BigEarthNet-MM (Sentinel-2)",
+      "scene_references": {
+        "scene_id": "scene_description_scene_015",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.65,
+          12.950000000000001,
+          76.75,
+          13.05
+        ]
+      },
+      "ground_truth": {
+        "target_class": "scene_description_class_0",
+        "expected_number": 32.5,
+        "unit": "pct",
+        "expected_confidence": 0.9
+      }
+    },
+    {
+      "item_id": "SQB-LAND-001",
+      "category": "landcover_vqa",
+      "modality": "optical",
+      "input_query": "What is the primary land use class visible in the northwest quadrant? (Sample #1)",
+      "dataset_source": "RSVQA (Sentinel-2)",
+      "scene_references": {
+        "scene_id": "landcover_vqa_scene_001",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.51,
+          12.81,
+          76.61,
+          12.91
+        ]
+      },
+      "ground_truth": {
+        "target_class": "landcover_vqa_class_1",
+        "expected_number": 11.5,
+        "unit": "pct",
+        "expected_confidence": 0.86
+      }
+    },
+    {
+      "item_id": "SQB-LAND-002",
+      "category": "landcover_vqa",
+      "modality": "optical",
+      "input_query": "What is the primary land use class visible in the northwest quadrant? (Sample #2)",
+      "dataset_source": "RSVQA (Sentinel-2)",
+      "scene_references": {
+        "scene_id": "landcover_vqa_scene_002",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.52,
+          12.82,
+          76.61999999999999,
+          12.92
+        ]
+      },
+      "ground_truth": {
+        "target_class": "landcover_vqa_class_2",
+        "expected_number": 13.0,
+        "unit": "pct",
+        "expected_confidence": 0.87
+      }
+    },
+    {
+      "item_id": "SQB-LAND-003",
+      "category": "landcover_vqa",
+      "modality": "optical",
+      "input_query": "What is the primary land use class visible in the northwest quadrant? (Sample #3)",
+      "dataset_source": "RSVQA (Sentinel-2)",
+      "scene_references": {
+        "scene_id": "landcover_vqa_scene_003",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.53,
+          12.83,
+          76.63,
+          12.93
+        ]
+      },
+      "ground_truth": {
+        "target_class": "landcover_vqa_class_0",
+        "expected_number": 14.5,
+        "unit": "pct",
+        "expected_confidence": 0.88
+      }
+    },
+    {
+      "item_id": "SQB-LAND-004",
+      "category": "landcover_vqa",
+      "modality": "optical",
+      "input_query": "What is the primary land use class visible in the northwest quadrant? (Sample #4)",
+      "dataset_source": "RSVQA (Sentinel-2)",
+      "scene_references": {
+        "scene_id": "landcover_vqa_scene_004",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.54,
+          12.84,
+          76.64,
+          12.94
+        ]
+      },
+      "ground_truth": {
+        "target_class": "landcover_vqa_class_1",
+        "expected_number": 16.0,
+        "unit": "pct",
+        "expected_confidence": 0.89
+      }
+    },
+    {
+      "item_id": "SQB-LAND-005",
+      "category": "landcover_vqa",
+      "modality": "optical",
+      "input_query": "What is the primary land use class visible in the northwest quadrant? (Sample #5)",
+      "dataset_source": "RSVQA (Sentinel-2)",
+      "scene_references": {
+        "scene_id": "landcover_vqa_scene_005",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.55,
+          12.850000000000001,
+          76.64999999999999,
+          12.950000000000001
+        ]
+      },
+      "ground_truth": {
+        "target_class": "landcover_vqa_class_2",
+        "expected_number": 17.5,
+        "unit": "pct",
+        "expected_confidence": 0.9
+      }
+    },
+    {
+      "item_id": "SQB-LAND-006",
+      "category": "landcover_vqa",
+      "modality": "optical",
+      "input_query": "What is the primary land use class visible in the northwest quadrant? (Sample #6)",
+      "dataset_source": "RSVQA (Sentinel-2)",
+      "scene_references": {
+        "scene_id": "landcover_vqa_scene_006",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.56,
+          12.860000000000001,
+          76.66,
+          12.96
+        ]
+      },
+      "ground_truth": {
+        "target_class": "landcover_vqa_class_0",
+        "expected_number": 19.0,
+        "unit": "pct",
+        "expected_confidence": 0.9099999999999999
+      }
+    },
+    {
+      "item_id": "SQB-LAND-007",
+      "category": "landcover_vqa",
+      "modality": "optical",
+      "input_query": "What is the primary land use class visible in the northwest quadrant? (Sample #7)",
+      "dataset_source": "RSVQA (Sentinel-2)",
+      "scene_references": {
+        "scene_id": "landcover_vqa_scene_007",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.57,
+          12.870000000000001,
+          76.66999999999999,
+          12.97
+        ]
+      },
+      "ground_truth": {
+        "target_class": "landcover_vqa_class_1",
+        "expected_number": 20.5,
+        "unit": "pct",
+        "expected_confidence": 0.9199999999999999
+      }
+    },
+    {
+      "item_id": "SQB-LAND-008",
+      "category": "landcover_vqa",
+      "modality": "optical",
+      "input_query": "What is the primary land use class visible in the northwest quadrant? (Sample #8)",
+      "dataset_source": "RSVQA (Sentinel-2)",
+      "scene_references": {
+        "scene_id": "landcover_vqa_scene_008",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.58,
+          12.88,
+          76.67999999999999,
+          12.98
+        ]
+      },
+      "ground_truth": {
+        "target_class": "landcover_vqa_class_2",
+        "expected_number": 22.0,
+        "unit": "pct",
+        "expected_confidence": 0.9299999999999999
+      }
+    },
+    {
+      "item_id": "SQB-LAND-009",
+      "category": "landcover_vqa",
+      "modality": "optical",
+      "input_query": "What is the primary land use class visible in the northwest quadrant? (Sample #9)",
+      "dataset_source": "RSVQA (Sentinel-2)",
+      "scene_references": {
+        "scene_id": "landcover_vqa_scene_009",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.59,
+          12.89,
+          76.69,
+          12.99
+        ]
+      },
+      "ground_truth": {
+        "target_class": "landcover_vqa_class_0",
+        "expected_number": 23.5,
+        "unit": "pct",
+        "expected_confidence": 0.94
+      }
+    },
+    {
+      "item_id": "SQB-LAND-010",
+      "category": "landcover_vqa",
+      "modality": "optical",
+      "input_query": "What is the primary land use class visible in the northwest quadrant? (Sample #10)",
+      "dataset_source": "RSVQA (Sentinel-2)",
+      "scene_references": {
+        "scene_id": "landcover_vqa_scene_010",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.6,
+          12.9,
+          76.69999999999999,
+          13.0
+        ]
+      },
+      "ground_truth": {
+        "target_class": "landcover_vqa_class_1",
+        "expected_number": 25.0,
+        "unit": "pct",
+        "expected_confidence": 0.85
+      }
+    },
+    {
+      "item_id": "SQB-LAND-011",
+      "category": "landcover_vqa",
+      "modality": "optical",
+      "input_query": "What is the primary land use class visible in the northwest quadrant? (Sample #11)",
+      "dataset_source": "RSVQA (Sentinel-2)",
+      "scene_references": {
+        "scene_id": "landcover_vqa_scene_011",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.61,
+          12.91,
+          76.71,
+          13.01
+        ]
+      },
+      "ground_truth": {
+        "target_class": "landcover_vqa_class_2",
+        "expected_number": 26.5,
+        "unit": "pct",
+        "expected_confidence": 0.86
+      }
+    },
+    {
+      "item_id": "SQB-LAND-012",
+      "category": "landcover_vqa",
+      "modality": "optical",
+      "input_query": "What is the primary land use class visible in the northwest quadrant? (Sample #12)",
+      "dataset_source": "RSVQA (Sentinel-2)",
+      "scene_references": {
+        "scene_id": "landcover_vqa_scene_012",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.62,
+          12.92,
+          76.72,
+          13.02
+        ]
+      },
+      "ground_truth": {
+        "target_class": "landcover_vqa_class_0",
+        "expected_number": 28.0,
+        "unit": "pct",
+        "expected_confidence": 0.87
+      }
+    },
+    {
+      "item_id": "SQB-LAND-013",
+      "category": "landcover_vqa",
+      "modality": "optical",
+      "input_query": "What is the primary land use class visible in the northwest quadrant? (Sample #13)",
+      "dataset_source": "RSVQA (Sentinel-2)",
+      "scene_references": {
+        "scene_id": "landcover_vqa_scene_013",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.63,
+          12.930000000000001,
+          76.72999999999999,
+          13.030000000000001
+        ]
+      },
+      "ground_truth": {
+        "target_class": "landcover_vqa_class_1",
+        "expected_number": 29.5,
+        "unit": "pct",
+        "expected_confidence": 0.88
+      }
+    },
+    {
+      "item_id": "SQB-LAND-014",
+      "category": "landcover_vqa",
+      "modality": "optical",
+      "input_query": "What is the primary land use class visible in the northwest quadrant? (Sample #14)",
+      "dataset_source": "RSVQA (Sentinel-2)",
+      "scene_references": {
+        "scene_id": "landcover_vqa_scene_014",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.64,
+          12.940000000000001,
+          76.74,
+          13.040000000000001
+        ]
+      },
+      "ground_truth": {
+        "target_class": "landcover_vqa_class_2",
+        "expected_number": 31.0,
+        "unit": "pct",
+        "expected_confidence": 0.89
+      }
+    },
+    {
+      "item_id": "SQB-LAND-015",
+      "category": "landcover_vqa",
+      "modality": "optical",
+      "input_query": "What is the primary land use class visible in the northwest quadrant? (Sample #15)",
+      "dataset_source": "RSVQA (Sentinel-2)",
+      "scene_references": {
+        "scene_id": "landcover_vqa_scene_015",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.65,
+          12.950000000000001,
+          76.75,
+          13.05
+        ]
+      },
+      "ground_truth": {
+        "target_class": "landcover_vqa_class_0",
+        "expected_number": 32.5,
+        "unit": "pct",
+        "expected_confidence": 0.9
+      }
+    },
+    {
+      "item_id": "SQB-OBJE-001",
+      "category": "object_grounding",
+      "modality": "optical",
+      "input_query": "Locate and return the bounding polygon for all industrial storage tanks. (Sample #1)",
+      "dataset_source": "VRSBench (Optical)",
+      "scene_references": {
+        "scene_id": "object_grounding_scene_001",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.51,
+          12.81,
+          76.61,
+          12.91
+        ]
+      },
+      "ground_truth": {
+        "target_class": "object_grounding_class_1",
+        "expected_number": 11.5,
+        "unit": "pct",
+        "expected_confidence": 0.86
+      }
+    },
+    {
+      "item_id": "SQB-OBJE-002",
+      "category": "object_grounding",
+      "modality": "optical",
+      "input_query": "Locate and return the bounding polygon for all industrial storage tanks. (Sample #2)",
+      "dataset_source": "VRSBench (Optical)",
+      "scene_references": {
+        "scene_id": "object_grounding_scene_002",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.52,
+          12.82,
+          76.61999999999999,
+          12.92
+        ]
+      },
+      "ground_truth": {
+        "target_class": "object_grounding_class_2",
+        "expected_number": 13.0,
+        "unit": "pct",
+        "expected_confidence": 0.87
+      }
+    },
+    {
+      "item_id": "SQB-OBJE-003",
+      "category": "object_grounding",
+      "modality": "optical",
+      "input_query": "Locate and return the bounding polygon for all industrial storage tanks. (Sample #3)",
+      "dataset_source": "VRSBench (Optical)",
+      "scene_references": {
+        "scene_id": "object_grounding_scene_003",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.53,
+          12.83,
+          76.63,
+          12.93
+        ]
+      },
+      "ground_truth": {
+        "target_class": "object_grounding_class_0",
+        "expected_number": 14.5,
+        "unit": "pct",
+        "expected_confidence": 0.88
+      }
+    },
+    {
+      "item_id": "SQB-OBJE-004",
+      "category": "object_grounding",
+      "modality": "optical",
+      "input_query": "Locate and return the bounding polygon for all industrial storage tanks. (Sample #4)",
+      "dataset_source": "VRSBench (Optical)",
+      "scene_references": {
+        "scene_id": "object_grounding_scene_004",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.54,
+          12.84,
+          76.64,
+          12.94
+        ]
+      },
+      "ground_truth": {
+        "target_class": "object_grounding_class_1",
+        "expected_number": 16.0,
+        "unit": "pct",
+        "expected_confidence": 0.89
+      }
+    },
+    {
+      "item_id": "SQB-OBJE-005",
+      "category": "object_grounding",
+      "modality": "optical",
+      "input_query": "Locate and return the bounding polygon for all industrial storage tanks. (Sample #5)",
+      "dataset_source": "VRSBench (Optical)",
+      "scene_references": {
+        "scene_id": "object_grounding_scene_005",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.55,
+          12.850000000000001,
+          76.64999999999999,
+          12.950000000000001
+        ]
+      },
+      "ground_truth": {
+        "target_class": "object_grounding_class_2",
+        "expected_number": 17.5,
+        "unit": "pct",
+        "expected_confidence": 0.9
+      }
+    },
+    {
+      "item_id": "SQB-OBJE-006",
+      "category": "object_grounding",
+      "modality": "optical",
+      "input_query": "Locate and return the bounding polygon for all industrial storage tanks. (Sample #6)",
+      "dataset_source": "VRSBench (Optical)",
+      "scene_references": {
+        "scene_id": "object_grounding_scene_006",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.56,
+          12.860000000000001,
+          76.66,
+          12.96
+        ]
+      },
+      "ground_truth": {
+        "target_class": "object_grounding_class_0",
+        "expected_number": 19.0,
+        "unit": "pct",
+        "expected_confidence": 0.9099999999999999
+      }
+    },
+    {
+      "item_id": "SQB-OBJE-007",
+      "category": "object_grounding",
+      "modality": "optical",
+      "input_query": "Locate and return the bounding polygon for all industrial storage tanks. (Sample #7)",
+      "dataset_source": "VRSBench (Optical)",
+      "scene_references": {
+        "scene_id": "object_grounding_scene_007",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.57,
+          12.870000000000001,
+          76.66999999999999,
+          12.97
+        ]
+      },
+      "ground_truth": {
+        "target_class": "object_grounding_class_1",
+        "expected_number": 20.5,
+        "unit": "pct",
+        "expected_confidence": 0.9199999999999999
+      }
+    },
+    {
+      "item_id": "SQB-OBJE-008",
+      "category": "object_grounding",
+      "modality": "optical",
+      "input_query": "Locate and return the bounding polygon for all industrial storage tanks. (Sample #8)",
+      "dataset_source": "VRSBench (Optical)",
+      "scene_references": {
+        "scene_id": "object_grounding_scene_008",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.58,
+          12.88,
+          76.67999999999999,
+          12.98
+        ]
+      },
+      "ground_truth": {
+        "target_class": "object_grounding_class_2",
+        "expected_number": 22.0,
+        "unit": "pct",
+        "expected_confidence": 0.9299999999999999
+      }
+    },
+    {
+      "item_id": "SQB-OBJE-009",
+      "category": "object_grounding",
+      "modality": "optical",
+      "input_query": "Locate and return the bounding polygon for all industrial storage tanks. (Sample #9)",
+      "dataset_source": "VRSBench (Optical)",
+      "scene_references": {
+        "scene_id": "object_grounding_scene_009",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.59,
+          12.89,
+          76.69,
+          12.99
+        ]
+      },
+      "ground_truth": {
+        "target_class": "object_grounding_class_0",
+        "expected_number": 23.5,
+        "unit": "pct",
+        "expected_confidence": 0.94
+      }
+    },
+    {
+      "item_id": "SQB-OBJE-010",
+      "category": "object_grounding",
+      "modality": "optical",
+      "input_query": "Locate and return the bounding polygon for all industrial storage tanks. (Sample #10)",
+      "dataset_source": "VRSBench (Optical)",
+      "scene_references": {
+        "scene_id": "object_grounding_scene_010",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.6,
+          12.9,
+          76.69999999999999,
+          13.0
+        ]
+      },
+      "ground_truth": {
+        "target_class": "object_grounding_class_1",
+        "expected_number": 25.0,
+        "unit": "pct",
+        "expected_confidence": 0.85
+      }
+    },
+    {
+      "item_id": "SQB-OBJE-011",
+      "category": "object_grounding",
+      "modality": "optical",
+      "input_query": "Locate and return the bounding polygon for all industrial storage tanks. (Sample #11)",
+      "dataset_source": "VRSBench (Optical)",
+      "scene_references": {
+        "scene_id": "object_grounding_scene_011",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.61,
+          12.91,
+          76.71,
+          13.01
+        ]
+      },
+      "ground_truth": {
+        "target_class": "object_grounding_class_2",
+        "expected_number": 26.5,
+        "unit": "pct",
+        "expected_confidence": 0.86
+      }
+    },
+    {
+      "item_id": "SQB-OBJE-012",
+      "category": "object_grounding",
+      "modality": "optical",
+      "input_query": "Locate and return the bounding polygon for all industrial storage tanks. (Sample #12)",
+      "dataset_source": "VRSBench (Optical)",
+      "scene_references": {
+        "scene_id": "object_grounding_scene_012",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.62,
+          12.92,
+          76.72,
+          13.02
+        ]
+      },
+      "ground_truth": {
+        "target_class": "object_grounding_class_0",
+        "expected_number": 28.0,
+        "unit": "pct",
+        "expected_confidence": 0.87
+      }
+    },
+    {
+      "item_id": "SQB-OBJE-013",
+      "category": "object_grounding",
+      "modality": "optical",
+      "input_query": "Locate and return the bounding polygon for all industrial storage tanks. (Sample #13)",
+      "dataset_source": "VRSBench (Optical)",
+      "scene_references": {
+        "scene_id": "object_grounding_scene_013",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.63,
+          12.930000000000001,
+          76.72999999999999,
+          13.030000000000001
+        ]
+      },
+      "ground_truth": {
+        "target_class": "object_grounding_class_1",
+        "expected_number": 29.5,
+        "unit": "pct",
+        "expected_confidence": 0.88
+      }
+    },
+    {
+      "item_id": "SQB-OBJE-014",
+      "category": "object_grounding",
+      "modality": "optical",
+      "input_query": "Locate and return the bounding polygon for all industrial storage tanks. (Sample #14)",
+      "dataset_source": "VRSBench (Optical)",
+      "scene_references": {
+        "scene_id": "object_grounding_scene_014",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.64,
+          12.940000000000001,
+          76.74,
+          13.040000000000001
+        ]
+      },
+      "ground_truth": {
+        "target_class": "object_grounding_class_2",
+        "expected_number": 31.0,
+        "unit": "pct",
+        "expected_confidence": 0.89
+      }
+    },
+    {
+      "item_id": "SQB-OBJE-015",
+      "category": "object_grounding",
+      "modality": "optical",
+      "input_query": "Locate and return the bounding polygon for all industrial storage tanks. (Sample #15)",
+      "dataset_source": "VRSBench (Optical)",
+      "scene_references": {
+        "scene_id": "object_grounding_scene_015",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.65,
+          12.950000000000001,
+          76.75,
+          13.05
+        ]
+      },
+      "ground_truth": {
+        "target_class": "object_grounding_class_0",
+        "expected_number": 32.5,
+        "unit": "pct",
+        "expected_confidence": 0.9
+      }
+    },
+    {
+      "item_id": "SQB-WATE-001",
+      "category": "water_detection",
+      "modality": "sar",
+      "input_query": "Detect standing water and delineate flooded zones in this SAR scene. (Sample #1)",
+      "dataset_source": "Copernicus Sentinel-1 (C-band SAR)",
+      "scene_references": {
+        "scene_id": "water_detection_scene_001",
+        "resolution_m": 20.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.51,
+          12.81,
+          76.61,
+          12.91
+        ]
+      },
+      "ground_truth": {
+        "target_class": "water_detection_class_1",
+        "expected_number": 11.5,
+        "unit": "ha",
+        "expected_confidence": 0.86
+      }
+    },
+    {
+      "item_id": "SQB-WATE-002",
+      "category": "water_detection",
+      "modality": "sar",
+      "input_query": "Detect standing water and delineate flooded zones in this SAR scene. (Sample #2)",
+      "dataset_source": "Copernicus Sentinel-1 (C-band SAR)",
+      "scene_references": {
+        "scene_id": "water_detection_scene_002",
+        "resolution_m": 20.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.52,
+          12.82,
+          76.61999999999999,
+          12.92
+        ]
+      },
+      "ground_truth": {
+        "target_class": "water_detection_class_2",
+        "expected_number": 13.0,
+        "unit": "ha",
+        "expected_confidence": 0.87
+      }
+    },
+    {
+      "item_id": "SQB-WATE-003",
+      "category": "water_detection",
+      "modality": "sar",
+      "input_query": "Detect standing water and delineate flooded zones in this SAR scene. (Sample #3)",
+      "dataset_source": "Copernicus Sentinel-1 (C-band SAR)",
+      "scene_references": {
+        "scene_id": "water_detection_scene_003",
+        "resolution_m": 20.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.53,
+          12.83,
+          76.63,
+          12.93
+        ]
+      },
+      "ground_truth": {
+        "target_class": "water_detection_class_0",
+        "expected_number": 14.5,
+        "unit": "ha",
+        "expected_confidence": 0.88
+      }
+    },
+    {
+      "item_id": "SQB-WATE-004",
+      "category": "water_detection",
+      "modality": "sar",
+      "input_query": "Detect standing water and delineate flooded zones in this SAR scene. (Sample #4)",
+      "dataset_source": "Copernicus Sentinel-1 (C-band SAR)",
+      "scene_references": {
+        "scene_id": "water_detection_scene_004",
+        "resolution_m": 20.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.54,
+          12.84,
+          76.64,
+          12.94
+        ]
+      },
+      "ground_truth": {
+        "target_class": "water_detection_class_1",
+        "expected_number": 16.0,
+        "unit": "ha",
+        "expected_confidence": 0.89
+      }
+    },
+    {
+      "item_id": "SQB-WATE-005",
+      "category": "water_detection",
+      "modality": "sar",
+      "input_query": "Detect standing water and delineate flooded zones in this SAR scene. (Sample #5)",
+      "dataset_source": "Copernicus Sentinel-1 (C-band SAR)",
+      "scene_references": {
+        "scene_id": "water_detection_scene_005",
+        "resolution_m": 20.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.55,
+          12.850000000000001,
+          76.64999999999999,
+          12.950000000000001
+        ]
+      },
+      "ground_truth": {
+        "target_class": "water_detection_class_2",
+        "expected_number": 17.5,
+        "unit": "ha",
+        "expected_confidence": 0.9
+      }
+    },
+    {
+      "item_id": "SQB-WATE-006",
+      "category": "water_detection",
+      "modality": "sar",
+      "input_query": "Detect standing water and delineate flooded zones in this SAR scene. (Sample #6)",
+      "dataset_source": "Copernicus Sentinel-1 (C-band SAR)",
+      "scene_references": {
+        "scene_id": "water_detection_scene_006",
+        "resolution_m": 20.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.56,
+          12.860000000000001,
+          76.66,
+          12.96
+        ]
+      },
+      "ground_truth": {
+        "target_class": "water_detection_class_0",
+        "expected_number": 19.0,
+        "unit": "ha",
+        "expected_confidence": 0.9099999999999999
+      }
+    },
+    {
+      "item_id": "SQB-WATE-007",
+      "category": "water_detection",
+      "modality": "sar",
+      "input_query": "Detect standing water and delineate flooded zones in this SAR scene. (Sample #7)",
+      "dataset_source": "Copernicus Sentinel-1 (C-band SAR)",
+      "scene_references": {
+        "scene_id": "water_detection_scene_007",
+        "resolution_m": 20.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.57,
+          12.870000000000001,
+          76.66999999999999,
+          12.97
+        ]
+      },
+      "ground_truth": {
+        "target_class": "water_detection_class_1",
+        "expected_number": 20.5,
+        "unit": "ha",
+        "expected_confidence": 0.9199999999999999
+      }
+    },
+    {
+      "item_id": "SQB-WATE-008",
+      "category": "water_detection",
+      "modality": "sar",
+      "input_query": "Detect standing water and delineate flooded zones in this SAR scene. (Sample #8)",
+      "dataset_source": "Copernicus Sentinel-1 (C-band SAR)",
+      "scene_references": {
+        "scene_id": "water_detection_scene_008",
+        "resolution_m": 20.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.58,
+          12.88,
+          76.67999999999999,
+          12.98
+        ]
+      },
+      "ground_truth": {
+        "target_class": "water_detection_class_2",
+        "expected_number": 22.0,
+        "unit": "ha",
+        "expected_confidence": 0.9299999999999999
+      }
+    },
+    {
+      "item_id": "SQB-WATE-009",
+      "category": "water_detection",
+      "modality": "sar",
+      "input_query": "Detect standing water and delineate flooded zones in this SAR scene. (Sample #9)",
+      "dataset_source": "Copernicus Sentinel-1 (C-band SAR)",
+      "scene_references": {
+        "scene_id": "water_detection_scene_009",
+        "resolution_m": 20.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.59,
+          12.89,
+          76.69,
+          12.99
+        ]
+      },
+      "ground_truth": {
+        "target_class": "water_detection_class_0",
+        "expected_number": 23.5,
+        "unit": "ha",
+        "expected_confidence": 0.94
+      }
+    },
+    {
+      "item_id": "SQB-WATE-010",
+      "category": "water_detection",
+      "modality": "sar",
+      "input_query": "Detect standing water and delineate flooded zones in this SAR scene. (Sample #10)",
+      "dataset_source": "Copernicus Sentinel-1 (C-band SAR)",
+      "scene_references": {
+        "scene_id": "water_detection_scene_010",
+        "resolution_m": 20.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.6,
+          12.9,
+          76.69999999999999,
+          13.0
+        ]
+      },
+      "ground_truth": {
+        "target_class": "water_detection_class_1",
+        "expected_number": 25.0,
+        "unit": "ha",
+        "expected_confidence": 0.85
+      }
+    },
+    {
+      "item_id": "SQB-WATE-011",
+      "category": "water_detection",
+      "modality": "sar",
+      "input_query": "Detect standing water and delineate flooded zones in this SAR scene. (Sample #11)",
+      "dataset_source": "Copernicus Sentinel-1 (C-band SAR)",
+      "scene_references": {
+        "scene_id": "water_detection_scene_011",
+        "resolution_m": 20.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.61,
+          12.91,
+          76.71,
+          13.01
+        ]
+      },
+      "ground_truth": {
+        "target_class": "water_detection_class_2",
+        "expected_number": 26.5,
+        "unit": "ha",
+        "expected_confidence": 0.86
+      }
+    },
+    {
+      "item_id": "SQB-WATE-012",
+      "category": "water_detection",
+      "modality": "sar",
+      "input_query": "Detect standing water and delineate flooded zones in this SAR scene. (Sample #12)",
+      "dataset_source": "Copernicus Sentinel-1 (C-band SAR)",
+      "scene_references": {
+        "scene_id": "water_detection_scene_012",
+        "resolution_m": 20.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.62,
+          12.92,
+          76.72,
+          13.02
+        ]
+      },
+      "ground_truth": {
+        "target_class": "water_detection_class_0",
+        "expected_number": 28.0,
+        "unit": "ha",
+        "expected_confidence": 0.87
+      }
+    },
+    {
+      "item_id": "SQB-WATE-013",
+      "category": "water_detection",
+      "modality": "sar",
+      "input_query": "Detect standing water and delineate flooded zones in this SAR scene. (Sample #13)",
+      "dataset_source": "Copernicus Sentinel-1 (C-band SAR)",
+      "scene_references": {
+        "scene_id": "water_detection_scene_013",
+        "resolution_m": 20.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.63,
+          12.930000000000001,
+          76.72999999999999,
+          13.030000000000001
+        ]
+      },
+      "ground_truth": {
+        "target_class": "water_detection_class_1",
+        "expected_number": 29.5,
+        "unit": "ha",
+        "expected_confidence": 0.88
+      }
+    },
+    {
+      "item_id": "SQB-WATE-014",
+      "category": "water_detection",
+      "modality": "sar",
+      "input_query": "Detect standing water and delineate flooded zones in this SAR scene. (Sample #14)",
+      "dataset_source": "Copernicus Sentinel-1 (C-band SAR)",
+      "scene_references": {
+        "scene_id": "water_detection_scene_014",
+        "resolution_m": 20.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.64,
+          12.940000000000001,
+          76.74,
+          13.040000000000001
+        ]
+      },
+      "ground_truth": {
+        "target_class": "water_detection_class_2",
+        "expected_number": 31.0,
+        "unit": "ha",
+        "expected_confidence": 0.89
+      }
+    },
+    {
+      "item_id": "SQB-WATE-015",
+      "category": "water_detection",
+      "modality": "sar",
+      "input_query": "Detect standing water and delineate flooded zones in this SAR scene. (Sample #15)",
+      "dataset_source": "Copernicus Sentinel-1 (C-band SAR)",
+      "scene_references": {
+        "scene_id": "water_detection_scene_015",
+        "resolution_m": 20.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.65,
+          12.950000000000001,
+          76.75,
+          13.05
+        ]
+      },
+      "ground_truth": {
+        "target_class": "water_detection_class_0",
+        "expected_number": 32.5,
+        "unit": "ha",
+        "expected_confidence": 0.9
+      }
+    },
+    {
+      "item_id": "SQB-BUIL-001",
+      "category": "builtup_detection",
+      "modality": "optical",
+      "input_query": "Identify impervious surface and built-up structures using NDBI differencing. (Sample #1)",
+      "dataset_source": "Copernicus Sentinel-2 / Cartosat-2S",
+      "scene_references": {
+        "scene_id": "builtup_detection_scene_001",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.51,
+          12.81,
+          76.61,
+          12.91
+        ]
+      },
+      "ground_truth": {
+        "target_class": "builtup_detection_class_1",
+        "expected_number": 11.5,
+        "unit": "ha",
+        "expected_confidence": 0.86
+      }
+    },
+    {
+      "item_id": "SQB-BUIL-002",
+      "category": "builtup_detection",
+      "modality": "optical",
+      "input_query": "Identify impervious surface and built-up structures using NDBI differencing. (Sample #2)",
+      "dataset_source": "Copernicus Sentinel-2 / Cartosat-2S",
+      "scene_references": {
+        "scene_id": "builtup_detection_scene_002",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.52,
+          12.82,
+          76.61999999999999,
+          12.92
+        ]
+      },
+      "ground_truth": {
+        "target_class": "builtup_detection_class_2",
+        "expected_number": 13.0,
+        "unit": "ha",
+        "expected_confidence": 0.87
+      }
+    },
+    {
+      "item_id": "SQB-BUIL-003",
+      "category": "builtup_detection",
+      "modality": "optical",
+      "input_query": "Identify impervious surface and built-up structures using NDBI differencing. (Sample #3)",
+      "dataset_source": "Copernicus Sentinel-2 / Cartosat-2S",
+      "scene_references": {
+        "scene_id": "builtup_detection_scene_003",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.53,
+          12.83,
+          76.63,
+          12.93
+        ]
+      },
+      "ground_truth": {
+        "target_class": "builtup_detection_class_0",
+        "expected_number": 14.5,
+        "unit": "ha",
+        "expected_confidence": 0.88
+      }
+    },
+    {
+      "item_id": "SQB-BUIL-004",
+      "category": "builtup_detection",
+      "modality": "optical",
+      "input_query": "Identify impervious surface and built-up structures using NDBI differencing. (Sample #4)",
+      "dataset_source": "Copernicus Sentinel-2 / Cartosat-2S",
+      "scene_references": {
+        "scene_id": "builtup_detection_scene_004",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.54,
+          12.84,
+          76.64,
+          12.94
+        ]
+      },
+      "ground_truth": {
+        "target_class": "builtup_detection_class_1",
+        "expected_number": 16.0,
+        "unit": "ha",
+        "expected_confidence": 0.89
+      }
+    },
+    {
+      "item_id": "SQB-BUIL-005",
+      "category": "builtup_detection",
+      "modality": "optical",
+      "input_query": "Identify impervious surface and built-up structures using NDBI differencing. (Sample #5)",
+      "dataset_source": "Copernicus Sentinel-2 / Cartosat-2S",
+      "scene_references": {
+        "scene_id": "builtup_detection_scene_005",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.55,
+          12.850000000000001,
+          76.64999999999999,
+          12.950000000000001
+        ]
+      },
+      "ground_truth": {
+        "target_class": "builtup_detection_class_2",
+        "expected_number": 17.5,
+        "unit": "ha",
+        "expected_confidence": 0.9
+      }
+    },
+    {
+      "item_id": "SQB-BUIL-006",
+      "category": "builtup_detection",
+      "modality": "optical",
+      "input_query": "Identify impervious surface and built-up structures using NDBI differencing. (Sample #6)",
+      "dataset_source": "Copernicus Sentinel-2 / Cartosat-2S",
+      "scene_references": {
+        "scene_id": "builtup_detection_scene_006",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.56,
+          12.860000000000001,
+          76.66,
+          12.96
+        ]
+      },
+      "ground_truth": {
+        "target_class": "builtup_detection_class_0",
+        "expected_number": 19.0,
+        "unit": "ha",
+        "expected_confidence": 0.9099999999999999
+      }
+    },
+    {
+      "item_id": "SQB-BUIL-007",
+      "category": "builtup_detection",
+      "modality": "optical",
+      "input_query": "Identify impervious surface and built-up structures using NDBI differencing. (Sample #7)",
+      "dataset_source": "Copernicus Sentinel-2 / Cartosat-2S",
+      "scene_references": {
+        "scene_id": "builtup_detection_scene_007",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.57,
+          12.870000000000001,
+          76.66999999999999,
+          12.97
+        ]
+      },
+      "ground_truth": {
+        "target_class": "builtup_detection_class_1",
+        "expected_number": 20.5,
+        "unit": "ha",
+        "expected_confidence": 0.9199999999999999
+      }
+    },
+    {
+      "item_id": "SQB-BUIL-008",
+      "category": "builtup_detection",
+      "modality": "optical",
+      "input_query": "Identify impervious surface and built-up structures using NDBI differencing. (Sample #8)",
+      "dataset_source": "Copernicus Sentinel-2 / Cartosat-2S",
+      "scene_references": {
+        "scene_id": "builtup_detection_scene_008",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.58,
+          12.88,
+          76.67999999999999,
+          12.98
+        ]
+      },
+      "ground_truth": {
+        "target_class": "builtup_detection_class_2",
+        "expected_number": 22.0,
+        "unit": "ha",
+        "expected_confidence": 0.9299999999999999
+      }
+    },
+    {
+      "item_id": "SQB-BUIL-009",
+      "category": "builtup_detection",
+      "modality": "optical",
+      "input_query": "Identify impervious surface and built-up structures using NDBI differencing. (Sample #9)",
+      "dataset_source": "Copernicus Sentinel-2 / Cartosat-2S",
+      "scene_references": {
+        "scene_id": "builtup_detection_scene_009",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.59,
+          12.89,
+          76.69,
+          12.99
+        ]
+      },
+      "ground_truth": {
+        "target_class": "builtup_detection_class_0",
+        "expected_number": 23.5,
+        "unit": "ha",
+        "expected_confidence": 0.94
+      }
+    },
+    {
+      "item_id": "SQB-BUIL-010",
+      "category": "builtup_detection",
+      "modality": "optical",
+      "input_query": "Identify impervious surface and built-up structures using NDBI differencing. (Sample #10)",
+      "dataset_source": "Copernicus Sentinel-2 / Cartosat-2S",
+      "scene_references": {
+        "scene_id": "builtup_detection_scene_010",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.6,
+          12.9,
+          76.69999999999999,
+          13.0
+        ]
+      },
+      "ground_truth": {
+        "target_class": "builtup_detection_class_1",
+        "expected_number": 25.0,
+        "unit": "ha",
+        "expected_confidence": 0.85
+      }
+    },
+    {
+      "item_id": "SQB-BUIL-011",
+      "category": "builtup_detection",
+      "modality": "optical",
+      "input_query": "Identify impervious surface and built-up structures using NDBI differencing. (Sample #11)",
+      "dataset_source": "Copernicus Sentinel-2 / Cartosat-2S",
+      "scene_references": {
+        "scene_id": "builtup_detection_scene_011",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.61,
+          12.91,
+          76.71,
+          13.01
+        ]
+      },
+      "ground_truth": {
+        "target_class": "builtup_detection_class_2",
+        "expected_number": 26.5,
+        "unit": "ha",
+        "expected_confidence": 0.86
+      }
+    },
+    {
+      "item_id": "SQB-BUIL-012",
+      "category": "builtup_detection",
+      "modality": "optical",
+      "input_query": "Identify impervious surface and built-up structures using NDBI differencing. (Sample #12)",
+      "dataset_source": "Copernicus Sentinel-2 / Cartosat-2S",
+      "scene_references": {
+        "scene_id": "builtup_detection_scene_012",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.62,
+          12.92,
+          76.72,
+          13.02
+        ]
+      },
+      "ground_truth": {
+        "target_class": "builtup_detection_class_0",
+        "expected_number": 28.0,
+        "unit": "ha",
+        "expected_confidence": 0.87
+      }
+    },
+    {
+      "item_id": "SQB-BUIL-013",
+      "category": "builtup_detection",
+      "modality": "optical",
+      "input_query": "Identify impervious surface and built-up structures using NDBI differencing. (Sample #13)",
+      "dataset_source": "Copernicus Sentinel-2 / Cartosat-2S",
+      "scene_references": {
+        "scene_id": "builtup_detection_scene_013",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.63,
+          12.930000000000001,
+          76.72999999999999,
+          13.030000000000001
+        ]
+      },
+      "ground_truth": {
+        "target_class": "builtup_detection_class_1",
+        "expected_number": 29.5,
+        "unit": "ha",
+        "expected_confidence": 0.88
+      }
+    },
+    {
+      "item_id": "SQB-BUIL-014",
+      "category": "builtup_detection",
+      "modality": "optical",
+      "input_query": "Identify impervious surface and built-up structures using NDBI differencing. (Sample #14)",
+      "dataset_source": "Copernicus Sentinel-2 / Cartosat-2S",
+      "scene_references": {
+        "scene_id": "builtup_detection_scene_014",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.64,
+          12.940000000000001,
+          76.74,
+          13.040000000000001
+        ]
+      },
+      "ground_truth": {
+        "target_class": "builtup_detection_class_2",
+        "expected_number": 31.0,
+        "unit": "ha",
+        "expected_confidence": 0.89
+      }
+    },
+    {
+      "item_id": "SQB-BUIL-015",
+      "category": "builtup_detection",
+      "modality": "optical",
+      "input_query": "Identify impervious surface and built-up structures using NDBI differencing. (Sample #15)",
+      "dataset_source": "Copernicus Sentinel-2 / Cartosat-2S",
+      "scene_references": {
+        "scene_id": "builtup_detection_scene_015",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.65,
+          12.950000000000001,
+          76.75,
+          13.05
+        ]
+      },
+      "ground_truth": {
+        "target_class": "builtup_detection_class_0",
+        "expected_number": 32.5,
+        "unit": "ha",
+        "expected_confidence": 0.9
+      }
+    },
+    {
+      "item_id": "SQB-TEMP-001",
+      "category": "temporal_change",
+      "modality": "bitemporal",
+      "input_query": "Compute binary change mask and total changed area between T1 and T2. (Sample #1)",
+      "dataset_source": "CDVQA / Onera Bi-Temporal Dataset",
+      "scene_references": {
+        "scene_id": "temporal_change_scene_001",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.51,
+          12.81,
+          76.61,
+          12.91
+        ]
+      },
+      "ground_truth": {
+        "target_class": "temporal_change_class_1",
+        "expected_number": 11.5,
+        "unit": "ha",
+        "expected_confidence": 0.86
+      }
+    },
+    {
+      "item_id": "SQB-TEMP-002",
+      "category": "temporal_change",
+      "modality": "bitemporal",
+      "input_query": "Compute binary change mask and total changed area between T1 and T2. (Sample #2)",
+      "dataset_source": "CDVQA / Onera Bi-Temporal Dataset",
+      "scene_references": {
+        "scene_id": "temporal_change_scene_002",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.52,
+          12.82,
+          76.61999999999999,
+          12.92
+        ]
+      },
+      "ground_truth": {
+        "target_class": "temporal_change_class_2",
+        "expected_number": 13.0,
+        "unit": "ha",
+        "expected_confidence": 0.87
+      }
+    },
+    {
+      "item_id": "SQB-TEMP-003",
+      "category": "temporal_change",
+      "modality": "bitemporal",
+      "input_query": "Compute binary change mask and total changed area between T1 and T2. (Sample #3)",
+      "dataset_source": "CDVQA / Onera Bi-Temporal Dataset",
+      "scene_references": {
+        "scene_id": "temporal_change_scene_003",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.53,
+          12.83,
+          76.63,
+          12.93
+        ]
+      },
+      "ground_truth": {
+        "target_class": "temporal_change_class_0",
+        "expected_number": 14.5,
+        "unit": "ha",
+        "expected_confidence": 0.88
+      }
+    },
+    {
+      "item_id": "SQB-TEMP-004",
+      "category": "temporal_change",
+      "modality": "bitemporal",
+      "input_query": "Compute binary change mask and total changed area between T1 and T2. (Sample #4)",
+      "dataset_source": "CDVQA / Onera Bi-Temporal Dataset",
+      "scene_references": {
+        "scene_id": "temporal_change_scene_004",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.54,
+          12.84,
+          76.64,
+          12.94
+        ]
+      },
+      "ground_truth": {
+        "target_class": "temporal_change_class_1",
+        "expected_number": 16.0,
+        "unit": "ha",
+        "expected_confidence": 0.89
+      }
+    },
+    {
+      "item_id": "SQB-TEMP-005",
+      "category": "temporal_change",
+      "modality": "bitemporal",
+      "input_query": "Compute binary change mask and total changed area between T1 and T2. (Sample #5)",
+      "dataset_source": "CDVQA / Onera Bi-Temporal Dataset",
+      "scene_references": {
+        "scene_id": "temporal_change_scene_005",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.55,
+          12.850000000000001,
+          76.64999999999999,
+          12.950000000000001
+        ]
+      },
+      "ground_truth": {
+        "target_class": "temporal_change_class_2",
+        "expected_number": 17.5,
+        "unit": "ha",
+        "expected_confidence": 0.9
+      }
+    },
+    {
+      "item_id": "SQB-TEMP-006",
+      "category": "temporal_change",
+      "modality": "bitemporal",
+      "input_query": "Compute binary change mask and total changed area between T1 and T2. (Sample #6)",
+      "dataset_source": "CDVQA / Onera Bi-Temporal Dataset",
+      "scene_references": {
+        "scene_id": "temporal_change_scene_006",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.56,
+          12.860000000000001,
+          76.66,
+          12.96
+        ]
+      },
+      "ground_truth": {
+        "target_class": "temporal_change_class_0",
+        "expected_number": 19.0,
+        "unit": "ha",
+        "expected_confidence": 0.9099999999999999
+      }
+    },
+    {
+      "item_id": "SQB-TEMP-007",
+      "category": "temporal_change",
+      "modality": "bitemporal",
+      "input_query": "Compute binary change mask and total changed area between T1 and T2. (Sample #7)",
+      "dataset_source": "CDVQA / Onera Bi-Temporal Dataset",
+      "scene_references": {
+        "scene_id": "temporal_change_scene_007",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.57,
+          12.870000000000001,
+          76.66999999999999,
+          12.97
+        ]
+      },
+      "ground_truth": {
+        "target_class": "temporal_change_class_1",
+        "expected_number": 20.5,
+        "unit": "ha",
+        "expected_confidence": 0.9199999999999999
+      }
+    },
+    {
+      "item_id": "SQB-TEMP-008",
+      "category": "temporal_change",
+      "modality": "bitemporal",
+      "input_query": "Compute binary change mask and total changed area between T1 and T2. (Sample #8)",
+      "dataset_source": "CDVQA / Onera Bi-Temporal Dataset",
+      "scene_references": {
+        "scene_id": "temporal_change_scene_008",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.58,
+          12.88,
+          76.67999999999999,
+          12.98
+        ]
+      },
+      "ground_truth": {
+        "target_class": "temporal_change_class_2",
+        "expected_number": 22.0,
+        "unit": "ha",
+        "expected_confidence": 0.9299999999999999
+      }
+    },
+    {
+      "item_id": "SQB-TEMP-009",
+      "category": "temporal_change",
+      "modality": "bitemporal",
+      "input_query": "Compute binary change mask and total changed area between T1 and T2. (Sample #9)",
+      "dataset_source": "CDVQA / Onera Bi-Temporal Dataset",
+      "scene_references": {
+        "scene_id": "temporal_change_scene_009",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.59,
+          12.89,
+          76.69,
+          12.99
+        ]
+      },
+      "ground_truth": {
+        "target_class": "temporal_change_class_0",
+        "expected_number": 23.5,
+        "unit": "ha",
+        "expected_confidence": 0.94
+      }
+    },
+    {
+      "item_id": "SQB-TEMP-010",
+      "category": "temporal_change",
+      "modality": "bitemporal",
+      "input_query": "Compute binary change mask and total changed area between T1 and T2. (Sample #10)",
+      "dataset_source": "CDVQA / Onera Bi-Temporal Dataset",
+      "scene_references": {
+        "scene_id": "temporal_change_scene_010",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.6,
+          12.9,
+          76.69999999999999,
+          13.0
+        ]
+      },
+      "ground_truth": {
+        "target_class": "temporal_change_class_1",
+        "expected_number": 25.0,
+        "unit": "ha",
+        "expected_confidence": 0.85
+      }
+    },
+    {
+      "item_id": "SQB-TEMP-011",
+      "category": "temporal_change",
+      "modality": "bitemporal",
+      "input_query": "Compute binary change mask and total changed area between T1 and T2. (Sample #11)",
+      "dataset_source": "CDVQA / Onera Bi-Temporal Dataset",
+      "scene_references": {
+        "scene_id": "temporal_change_scene_011",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.61,
+          12.91,
+          76.71,
+          13.01
+        ]
+      },
+      "ground_truth": {
+        "target_class": "temporal_change_class_2",
+        "expected_number": 26.5,
+        "unit": "ha",
+        "expected_confidence": 0.86
+      }
+    },
+    {
+      "item_id": "SQB-TEMP-012",
+      "category": "temporal_change",
+      "modality": "bitemporal",
+      "input_query": "Compute binary change mask and total changed area between T1 and T2. (Sample #12)",
+      "dataset_source": "CDVQA / Onera Bi-Temporal Dataset",
+      "scene_references": {
+        "scene_id": "temporal_change_scene_012",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.62,
+          12.92,
+          76.72,
+          13.02
+        ]
+      },
+      "ground_truth": {
+        "target_class": "temporal_change_class_0",
+        "expected_number": 28.0,
+        "unit": "ha",
+        "expected_confidence": 0.87
+      }
+    },
+    {
+      "item_id": "SQB-TEMP-013",
+      "category": "temporal_change",
+      "modality": "bitemporal",
+      "input_query": "Compute binary change mask and total changed area between T1 and T2. (Sample #13)",
+      "dataset_source": "CDVQA / Onera Bi-Temporal Dataset",
+      "scene_references": {
+        "scene_id": "temporal_change_scene_013",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.63,
+          12.930000000000001,
+          76.72999999999999,
+          13.030000000000001
+        ]
+      },
+      "ground_truth": {
+        "target_class": "temporal_change_class_1",
+        "expected_number": 29.5,
+        "unit": "ha",
+        "expected_confidence": 0.88
+      }
+    },
+    {
+      "item_id": "SQB-TEMP-014",
+      "category": "temporal_change",
+      "modality": "bitemporal",
+      "input_query": "Compute binary change mask and total changed area between T1 and T2. (Sample #14)",
+      "dataset_source": "CDVQA / Onera Bi-Temporal Dataset",
+      "scene_references": {
+        "scene_id": "temporal_change_scene_014",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.64,
+          12.940000000000001,
+          76.74,
+          13.040000000000001
+        ]
+      },
+      "ground_truth": {
+        "target_class": "temporal_change_class_2",
+        "expected_number": 31.0,
+        "unit": "ha",
+        "expected_confidence": 0.89
+      }
+    },
+    {
+      "item_id": "SQB-TEMP-015",
+      "category": "temporal_change",
+      "modality": "bitemporal",
+      "input_query": "Compute binary change mask and total changed area between T1 and T2. (Sample #15)",
+      "dataset_source": "CDVQA / Onera Bi-Temporal Dataset",
+      "scene_references": {
+        "scene_id": "temporal_change_scene_015",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.65,
+          12.950000000000001,
+          76.75,
+          13.05
+        ]
+      },
+      "ground_truth": {
+        "target_class": "temporal_change_class_0",
+        "expected_number": 32.5,
+        "unit": "ha",
+        "expected_confidence": 0.9
+      }
+    },
+    {
+      "item_id": "SQB-CHAN-001",
+      "category": "change_explanation",
+      "modality": "bitemporal",
+      "input_query": "Explain the physical cause and ecological significance of the detected change. (Sample #1)",
+      "dataset_source": "SatQuery Curated Multi-Temporal Pair",
+      "scene_references": {
+        "scene_id": "change_explanation_scene_001",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.51,
+          12.81,
+          76.61,
+          12.91
+        ]
+      },
+      "ground_truth": {
+        "target_class": "change_explanation_class_1",
+        "expected_number": 11.5,
+        "unit": "ha",
+        "expected_confidence": 0.86
+      }
+    },
+    {
+      "item_id": "SQB-CHAN-002",
+      "category": "change_explanation",
+      "modality": "bitemporal",
+      "input_query": "Explain the physical cause and ecological significance of the detected change. (Sample #2)",
+      "dataset_source": "SatQuery Curated Multi-Temporal Pair",
+      "scene_references": {
+        "scene_id": "change_explanation_scene_002",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.52,
+          12.82,
+          76.61999999999999,
+          12.92
+        ]
+      },
+      "ground_truth": {
+        "target_class": "change_explanation_class_2",
+        "expected_number": 13.0,
+        "unit": "ha",
+        "expected_confidence": 0.87
+      }
+    },
+    {
+      "item_id": "SQB-CHAN-003",
+      "category": "change_explanation",
+      "modality": "bitemporal",
+      "input_query": "Explain the physical cause and ecological significance of the detected change. (Sample #3)",
+      "dataset_source": "SatQuery Curated Multi-Temporal Pair",
+      "scene_references": {
+        "scene_id": "change_explanation_scene_003",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.53,
+          12.83,
+          76.63,
+          12.93
+        ]
+      },
+      "ground_truth": {
+        "target_class": "change_explanation_class_0",
+        "expected_number": 14.5,
+        "unit": "ha",
+        "expected_confidence": 0.88
+      }
+    },
+    {
+      "item_id": "SQB-CHAN-004",
+      "category": "change_explanation",
+      "modality": "bitemporal",
+      "input_query": "Explain the physical cause and ecological significance of the detected change. (Sample #4)",
+      "dataset_source": "SatQuery Curated Multi-Temporal Pair",
+      "scene_references": {
+        "scene_id": "change_explanation_scene_004",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.54,
+          12.84,
+          76.64,
+          12.94
+        ]
+      },
+      "ground_truth": {
+        "target_class": "change_explanation_class_1",
+        "expected_number": 16.0,
+        "unit": "ha",
+        "expected_confidence": 0.89
+      }
+    },
+    {
+      "item_id": "SQB-CHAN-005",
+      "category": "change_explanation",
+      "modality": "bitemporal",
+      "input_query": "Explain the physical cause and ecological significance of the detected change. (Sample #5)",
+      "dataset_source": "SatQuery Curated Multi-Temporal Pair",
+      "scene_references": {
+        "scene_id": "change_explanation_scene_005",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.55,
+          12.850000000000001,
+          76.64999999999999,
+          12.950000000000001
+        ]
+      },
+      "ground_truth": {
+        "target_class": "change_explanation_class_2",
+        "expected_number": 17.5,
+        "unit": "ha",
+        "expected_confidence": 0.9
+      }
+    },
+    {
+      "item_id": "SQB-CHAN-006",
+      "category": "change_explanation",
+      "modality": "bitemporal",
+      "input_query": "Explain the physical cause and ecological significance of the detected change. (Sample #6)",
+      "dataset_source": "SatQuery Curated Multi-Temporal Pair",
+      "scene_references": {
+        "scene_id": "change_explanation_scene_006",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.56,
+          12.860000000000001,
+          76.66,
+          12.96
+        ]
+      },
+      "ground_truth": {
+        "target_class": "change_explanation_class_0",
+        "expected_number": 19.0,
+        "unit": "ha",
+        "expected_confidence": 0.9099999999999999
+      }
+    },
+    {
+      "item_id": "SQB-CHAN-007",
+      "category": "change_explanation",
+      "modality": "bitemporal",
+      "input_query": "Explain the physical cause and ecological significance of the detected change. (Sample #7)",
+      "dataset_source": "SatQuery Curated Multi-Temporal Pair",
+      "scene_references": {
+        "scene_id": "change_explanation_scene_007",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.57,
+          12.870000000000001,
+          76.66999999999999,
+          12.97
+        ]
+      },
+      "ground_truth": {
+        "target_class": "change_explanation_class_1",
+        "expected_number": 20.5,
+        "unit": "ha",
+        "expected_confidence": 0.9199999999999999
+      }
+    },
+    {
+      "item_id": "SQB-CHAN-008",
+      "category": "change_explanation",
+      "modality": "bitemporal",
+      "input_query": "Explain the physical cause and ecological significance of the detected change. (Sample #8)",
+      "dataset_source": "SatQuery Curated Multi-Temporal Pair",
+      "scene_references": {
+        "scene_id": "change_explanation_scene_008",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.58,
+          12.88,
+          76.67999999999999,
+          12.98
+        ]
+      },
+      "ground_truth": {
+        "target_class": "change_explanation_class_2",
+        "expected_number": 22.0,
+        "unit": "ha",
+        "expected_confidence": 0.9299999999999999
+      }
+    },
+    {
+      "item_id": "SQB-CHAN-009",
+      "category": "change_explanation",
+      "modality": "bitemporal",
+      "input_query": "Explain the physical cause and ecological significance of the detected change. (Sample #9)",
+      "dataset_source": "SatQuery Curated Multi-Temporal Pair",
+      "scene_references": {
+        "scene_id": "change_explanation_scene_009",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.59,
+          12.89,
+          76.69,
+          12.99
+        ]
+      },
+      "ground_truth": {
+        "target_class": "change_explanation_class_0",
+        "expected_number": 23.5,
+        "unit": "ha",
+        "expected_confidence": 0.94
+      }
+    },
+    {
+      "item_id": "SQB-CHAN-010",
+      "category": "change_explanation",
+      "modality": "bitemporal",
+      "input_query": "Explain the physical cause and ecological significance of the detected change. (Sample #10)",
+      "dataset_source": "SatQuery Curated Multi-Temporal Pair",
+      "scene_references": {
+        "scene_id": "change_explanation_scene_010",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.6,
+          12.9,
+          76.69999999999999,
+          13.0
+        ]
+      },
+      "ground_truth": {
+        "target_class": "change_explanation_class_1",
+        "expected_number": 25.0,
+        "unit": "ha",
+        "expected_confidence": 0.85
+      }
+    },
+    {
+      "item_id": "SQB-CHAN-011",
+      "category": "change_explanation",
+      "modality": "bitemporal",
+      "input_query": "Explain the physical cause and ecological significance of the detected change. (Sample #11)",
+      "dataset_source": "SatQuery Curated Multi-Temporal Pair",
+      "scene_references": {
+        "scene_id": "change_explanation_scene_011",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.61,
+          12.91,
+          76.71,
+          13.01
+        ]
+      },
+      "ground_truth": {
+        "target_class": "change_explanation_class_2",
+        "expected_number": 26.5,
+        "unit": "ha",
+        "expected_confidence": 0.86
+      }
+    },
+    {
+      "item_id": "SQB-CHAN-012",
+      "category": "change_explanation",
+      "modality": "bitemporal",
+      "input_query": "Explain the physical cause and ecological significance of the detected change. (Sample #12)",
+      "dataset_source": "SatQuery Curated Multi-Temporal Pair",
+      "scene_references": {
+        "scene_id": "change_explanation_scene_012",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.62,
+          12.92,
+          76.72,
+          13.02
+        ]
+      },
+      "ground_truth": {
+        "target_class": "change_explanation_class_0",
+        "expected_number": 28.0,
+        "unit": "ha",
+        "expected_confidence": 0.87
+      }
+    },
+    {
+      "item_id": "SQB-CHAN-013",
+      "category": "change_explanation",
+      "modality": "bitemporal",
+      "input_query": "Explain the physical cause and ecological significance of the detected change. (Sample #13)",
+      "dataset_source": "SatQuery Curated Multi-Temporal Pair",
+      "scene_references": {
+        "scene_id": "change_explanation_scene_013",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.63,
+          12.930000000000001,
+          76.72999999999999,
+          13.030000000000001
+        ]
+      },
+      "ground_truth": {
+        "target_class": "change_explanation_class_1",
+        "expected_number": 29.5,
+        "unit": "ha",
+        "expected_confidence": 0.88
+      }
+    },
+    {
+      "item_id": "SQB-CHAN-014",
+      "category": "change_explanation",
+      "modality": "bitemporal",
+      "input_query": "Explain the physical cause and ecological significance of the detected change. (Sample #14)",
+      "dataset_source": "SatQuery Curated Multi-Temporal Pair",
+      "scene_references": {
+        "scene_id": "change_explanation_scene_014",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.64,
+          12.940000000000001,
+          76.74,
+          13.040000000000001
+        ]
+      },
+      "ground_truth": {
+        "target_class": "change_explanation_class_2",
+        "expected_number": 31.0,
+        "unit": "ha",
+        "expected_confidence": 0.89
+      }
+    },
+    {
+      "item_id": "SQB-CHAN-015",
+      "category": "change_explanation",
+      "modality": "bitemporal",
+      "input_query": "Explain the physical cause and ecological significance of the detected change. (Sample #15)",
+      "dataset_source": "SatQuery Curated Multi-Temporal Pair",
+      "scene_references": {
+        "scene_id": "change_explanation_scene_015",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.65,
+          12.950000000000001,
+          76.75,
+          13.05
+        ]
+      },
+      "ground_truth": {
+        "target_class": "change_explanation_class_0",
+        "expected_number": 32.5,
+        "unit": "ha",
+        "expected_confidence": 0.9
+      }
+    },
+    {
+      "item_id": "SQB-OPTI-001",
+      "category": "optical_sar_fusion",
+      "modality": "multimodal",
+      "input_query": "Resolve cloud-cover disagreement between optical T2 and SAR penetration. (Sample #1)",
+      "dataset_source": "Copernicus Sentinel-1 + Sentinel-2 Co-registered",
+      "scene_references": {
+        "scene_id": "optical_sar_fusion_scene_001",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.51,
+          12.81,
+          76.61,
+          12.91
+        ]
+      },
+      "ground_truth": {
+        "target_class": "optical_sar_fusion_class_1",
+        "expected_number": 11.5,
+        "unit": "pct",
+        "expected_confidence": 0.86
+      }
+    },
+    {
+      "item_id": "SQB-OPTI-002",
+      "category": "optical_sar_fusion",
+      "modality": "multimodal",
+      "input_query": "Resolve cloud-cover disagreement between optical T2 and SAR penetration. (Sample #2)",
+      "dataset_source": "Copernicus Sentinel-1 + Sentinel-2 Co-registered",
+      "scene_references": {
+        "scene_id": "optical_sar_fusion_scene_002",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.52,
+          12.82,
+          76.61999999999999,
+          12.92
+        ]
+      },
+      "ground_truth": {
+        "target_class": "optical_sar_fusion_class_2",
+        "expected_number": 13.0,
+        "unit": "pct",
+        "expected_confidence": 0.87
+      }
+    },
+    {
+      "item_id": "SQB-OPTI-003",
+      "category": "optical_sar_fusion",
+      "modality": "multimodal",
+      "input_query": "Resolve cloud-cover disagreement between optical T2 and SAR penetration. (Sample #3)",
+      "dataset_source": "Copernicus Sentinel-1 + Sentinel-2 Co-registered",
+      "scene_references": {
+        "scene_id": "optical_sar_fusion_scene_003",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.53,
+          12.83,
+          76.63,
+          12.93
+        ]
+      },
+      "ground_truth": {
+        "target_class": "optical_sar_fusion_class_0",
+        "expected_number": 14.5,
+        "unit": "pct",
+        "expected_confidence": 0.88
+      }
+    },
+    {
+      "item_id": "SQB-OPTI-004",
+      "category": "optical_sar_fusion",
+      "modality": "multimodal",
+      "input_query": "Resolve cloud-cover disagreement between optical T2 and SAR penetration. (Sample #4)",
+      "dataset_source": "Copernicus Sentinel-1 + Sentinel-2 Co-registered",
+      "scene_references": {
+        "scene_id": "optical_sar_fusion_scene_004",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.54,
+          12.84,
+          76.64,
+          12.94
+        ]
+      },
+      "ground_truth": {
+        "target_class": "optical_sar_fusion_class_1",
+        "expected_number": 16.0,
+        "unit": "pct",
+        "expected_confidence": 0.89
+      }
+    },
+    {
+      "item_id": "SQB-OPTI-005",
+      "category": "optical_sar_fusion",
+      "modality": "multimodal",
+      "input_query": "Resolve cloud-cover disagreement between optical T2 and SAR penetration. (Sample #5)",
+      "dataset_source": "Copernicus Sentinel-1 + Sentinel-2 Co-registered",
+      "scene_references": {
+        "scene_id": "optical_sar_fusion_scene_005",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.55,
+          12.850000000000001,
+          76.64999999999999,
+          12.950000000000001
+        ]
+      },
+      "ground_truth": {
+        "target_class": "optical_sar_fusion_class_2",
+        "expected_number": 17.5,
+        "unit": "pct",
+        "expected_confidence": 0.9
+      }
+    },
+    {
+      "item_id": "SQB-OPTI-006",
+      "category": "optical_sar_fusion",
+      "modality": "multimodal",
+      "input_query": "Resolve cloud-cover disagreement between optical T2 and SAR penetration. (Sample #6)",
+      "dataset_source": "Copernicus Sentinel-1 + Sentinel-2 Co-registered",
+      "scene_references": {
+        "scene_id": "optical_sar_fusion_scene_006",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.56,
+          12.860000000000001,
+          76.66,
+          12.96
+        ]
+      },
+      "ground_truth": {
+        "target_class": "optical_sar_fusion_class_0",
+        "expected_number": 19.0,
+        "unit": "pct",
+        "expected_confidence": 0.9099999999999999
+      }
+    },
+    {
+      "item_id": "SQB-OPTI-007",
+      "category": "optical_sar_fusion",
+      "modality": "multimodal",
+      "input_query": "Resolve cloud-cover disagreement between optical T2 and SAR penetration. (Sample #7)",
+      "dataset_source": "Copernicus Sentinel-1 + Sentinel-2 Co-registered",
+      "scene_references": {
+        "scene_id": "optical_sar_fusion_scene_007",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.57,
+          12.870000000000001,
+          76.66999999999999,
+          12.97
+        ]
+      },
+      "ground_truth": {
+        "target_class": "optical_sar_fusion_class_1",
+        "expected_number": 20.5,
+        "unit": "pct",
+        "expected_confidence": 0.9199999999999999
+      }
+    },
+    {
+      "item_id": "SQB-OPTI-008",
+      "category": "optical_sar_fusion",
+      "modality": "multimodal",
+      "input_query": "Resolve cloud-cover disagreement between optical T2 and SAR penetration. (Sample #8)",
+      "dataset_source": "Copernicus Sentinel-1 + Sentinel-2 Co-registered",
+      "scene_references": {
+        "scene_id": "optical_sar_fusion_scene_008",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.58,
+          12.88,
+          76.67999999999999,
+          12.98
+        ]
+      },
+      "ground_truth": {
+        "target_class": "optical_sar_fusion_class_2",
+        "expected_number": 22.0,
+        "unit": "pct",
+        "expected_confidence": 0.9299999999999999
+      }
+    },
+    {
+      "item_id": "SQB-OPTI-009",
+      "category": "optical_sar_fusion",
+      "modality": "multimodal",
+      "input_query": "Resolve cloud-cover disagreement between optical T2 and SAR penetration. (Sample #9)",
+      "dataset_source": "Copernicus Sentinel-1 + Sentinel-2 Co-registered",
+      "scene_references": {
+        "scene_id": "optical_sar_fusion_scene_009",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.59,
+          12.89,
+          76.69,
+          12.99
+        ]
+      },
+      "ground_truth": {
+        "target_class": "optical_sar_fusion_class_0",
+        "expected_number": 23.5,
+        "unit": "pct",
+        "expected_confidence": 0.94
+      }
+    },
+    {
+      "item_id": "SQB-OPTI-010",
+      "category": "optical_sar_fusion",
+      "modality": "multimodal",
+      "input_query": "Resolve cloud-cover disagreement between optical T2 and SAR penetration. (Sample #10)",
+      "dataset_source": "Copernicus Sentinel-1 + Sentinel-2 Co-registered",
+      "scene_references": {
+        "scene_id": "optical_sar_fusion_scene_010",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.6,
+          12.9,
+          76.69999999999999,
+          13.0
+        ]
+      },
+      "ground_truth": {
+        "target_class": "optical_sar_fusion_class_1",
+        "expected_number": 25.0,
+        "unit": "pct",
+        "expected_confidence": 0.85
+      }
+    },
+    {
+      "item_id": "SQB-OPTI-011",
+      "category": "optical_sar_fusion",
+      "modality": "multimodal",
+      "input_query": "Resolve cloud-cover disagreement between optical T2 and SAR penetration. (Sample #11)",
+      "dataset_source": "Copernicus Sentinel-1 + Sentinel-2 Co-registered",
+      "scene_references": {
+        "scene_id": "optical_sar_fusion_scene_011",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.61,
+          12.91,
+          76.71,
+          13.01
+        ]
+      },
+      "ground_truth": {
+        "target_class": "optical_sar_fusion_class_2",
+        "expected_number": 26.5,
+        "unit": "pct",
+        "expected_confidence": 0.86
+      }
+    },
+    {
+      "item_id": "SQB-OPTI-012",
+      "category": "optical_sar_fusion",
+      "modality": "multimodal",
+      "input_query": "Resolve cloud-cover disagreement between optical T2 and SAR penetration. (Sample #12)",
+      "dataset_source": "Copernicus Sentinel-1 + Sentinel-2 Co-registered",
+      "scene_references": {
+        "scene_id": "optical_sar_fusion_scene_012",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.62,
+          12.92,
+          76.72,
+          13.02
+        ]
+      },
+      "ground_truth": {
+        "target_class": "optical_sar_fusion_class_0",
+        "expected_number": 28.0,
+        "unit": "pct",
+        "expected_confidence": 0.87
+      }
+    },
+    {
+      "item_id": "SQB-OPTI-013",
+      "category": "optical_sar_fusion",
+      "modality": "multimodal",
+      "input_query": "Resolve cloud-cover disagreement between optical T2 and SAR penetration. (Sample #13)",
+      "dataset_source": "Copernicus Sentinel-1 + Sentinel-2 Co-registered",
+      "scene_references": {
+        "scene_id": "optical_sar_fusion_scene_013",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.63,
+          12.930000000000001,
+          76.72999999999999,
+          13.030000000000001
+        ]
+      },
+      "ground_truth": {
+        "target_class": "optical_sar_fusion_class_1",
+        "expected_number": 29.5,
+        "unit": "pct",
+        "expected_confidence": 0.88
+      }
+    },
+    {
+      "item_id": "SQB-OPTI-014",
+      "category": "optical_sar_fusion",
+      "modality": "multimodal",
+      "input_query": "Resolve cloud-cover disagreement between optical T2 and SAR penetration. (Sample #14)",
+      "dataset_source": "Copernicus Sentinel-1 + Sentinel-2 Co-registered",
+      "scene_references": {
+        "scene_id": "optical_sar_fusion_scene_014",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.64,
+          12.940000000000001,
+          76.74,
+          13.040000000000001
+        ]
+      },
+      "ground_truth": {
+        "target_class": "optical_sar_fusion_class_2",
+        "expected_number": 31.0,
+        "unit": "pct",
+        "expected_confidence": 0.89
+      }
+    },
+    {
+      "item_id": "SQB-OPTI-015",
+      "category": "optical_sar_fusion",
+      "modality": "multimodal",
+      "input_query": "Resolve cloud-cover disagreement between optical T2 and SAR penetration. (Sample #15)",
+      "dataset_source": "Copernicus Sentinel-1 + Sentinel-2 Co-registered",
+      "scene_references": {
+        "scene_id": "optical_sar_fusion_scene_015",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.65,
+          12.950000000000001,
+          76.75,
+          13.05
+        ]
+      },
+      "ground_truth": {
+        "target_class": "optical_sar_fusion_class_0",
+        "expected_number": 32.5,
+        "unit": "pct",
+        "expected_confidence": 0.9
+      }
+    },
+    {
+      "item_id": "SQB-GEOS-001",
+      "category": "geospatial_reasoning",
+      "modality": "optical",
+      "input_query": "Calculate distance from the river bank to the expanding urban perimeter. (Sample #1)",
+      "dataset_source": "USGS Landsat-8 / Cartosat",
+      "scene_references": {
+        "scene_id": "geospatial_reasoning_scene_001",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.51,
+          12.81,
+          76.61,
+          12.91
+        ]
+      },
+      "ground_truth": {
+        "target_class": "geospatial_reasoning_class_1",
+        "expected_number": 11.5,
+        "unit": "pct",
+        "expected_confidence": 0.86
+      }
+    },
+    {
+      "item_id": "SQB-GEOS-002",
+      "category": "geospatial_reasoning",
+      "modality": "optical",
+      "input_query": "Calculate distance from the river bank to the expanding urban perimeter. (Sample #2)",
+      "dataset_source": "USGS Landsat-8 / Cartosat",
+      "scene_references": {
+        "scene_id": "geospatial_reasoning_scene_002",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.52,
+          12.82,
+          76.61999999999999,
+          12.92
+        ]
+      },
+      "ground_truth": {
+        "target_class": "geospatial_reasoning_class_2",
+        "expected_number": 13.0,
+        "unit": "pct",
+        "expected_confidence": 0.87
+      }
+    },
+    {
+      "item_id": "SQB-GEOS-003",
+      "category": "geospatial_reasoning",
+      "modality": "optical",
+      "input_query": "Calculate distance from the river bank to the expanding urban perimeter. (Sample #3)",
+      "dataset_source": "USGS Landsat-8 / Cartosat",
+      "scene_references": {
+        "scene_id": "geospatial_reasoning_scene_003",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.53,
+          12.83,
+          76.63,
+          12.93
+        ]
+      },
+      "ground_truth": {
+        "target_class": "geospatial_reasoning_class_0",
+        "expected_number": 14.5,
+        "unit": "pct",
+        "expected_confidence": 0.88
+      }
+    },
+    {
+      "item_id": "SQB-GEOS-004",
+      "category": "geospatial_reasoning",
+      "modality": "optical",
+      "input_query": "Calculate distance from the river bank to the expanding urban perimeter. (Sample #4)",
+      "dataset_source": "USGS Landsat-8 / Cartosat",
+      "scene_references": {
+        "scene_id": "geospatial_reasoning_scene_004",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.54,
+          12.84,
+          76.64,
+          12.94
+        ]
+      },
+      "ground_truth": {
+        "target_class": "geospatial_reasoning_class_1",
+        "expected_number": 16.0,
+        "unit": "pct",
+        "expected_confidence": 0.89
+      }
+    },
+    {
+      "item_id": "SQB-GEOS-005",
+      "category": "geospatial_reasoning",
+      "modality": "optical",
+      "input_query": "Calculate distance from the river bank to the expanding urban perimeter. (Sample #5)",
+      "dataset_source": "USGS Landsat-8 / Cartosat",
+      "scene_references": {
+        "scene_id": "geospatial_reasoning_scene_005",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.55,
+          12.850000000000001,
+          76.64999999999999,
+          12.950000000000001
+        ]
+      },
+      "ground_truth": {
+        "target_class": "geospatial_reasoning_class_2",
+        "expected_number": 17.5,
+        "unit": "pct",
+        "expected_confidence": 0.9
+      }
+    },
+    {
+      "item_id": "SQB-GEOS-006",
+      "category": "geospatial_reasoning",
+      "modality": "optical",
+      "input_query": "Calculate distance from the river bank to the expanding urban perimeter. (Sample #6)",
+      "dataset_source": "USGS Landsat-8 / Cartosat",
+      "scene_references": {
+        "scene_id": "geospatial_reasoning_scene_006",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.56,
+          12.860000000000001,
+          76.66,
+          12.96
+        ]
+      },
+      "ground_truth": {
+        "target_class": "geospatial_reasoning_class_0",
+        "expected_number": 19.0,
+        "unit": "pct",
+        "expected_confidence": 0.9099999999999999
+      }
+    },
+    {
+      "item_id": "SQB-GEOS-007",
+      "category": "geospatial_reasoning",
+      "modality": "optical",
+      "input_query": "Calculate distance from the river bank to the expanding urban perimeter. (Sample #7)",
+      "dataset_source": "USGS Landsat-8 / Cartosat",
+      "scene_references": {
+        "scene_id": "geospatial_reasoning_scene_007",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.57,
+          12.870000000000001,
+          76.66999999999999,
+          12.97
+        ]
+      },
+      "ground_truth": {
+        "target_class": "geospatial_reasoning_class_1",
+        "expected_number": 20.5,
+        "unit": "pct",
+        "expected_confidence": 0.9199999999999999
+      }
+    },
+    {
+      "item_id": "SQB-GEOS-008",
+      "category": "geospatial_reasoning",
+      "modality": "optical",
+      "input_query": "Calculate distance from the river bank to the expanding urban perimeter. (Sample #8)",
+      "dataset_source": "USGS Landsat-8 / Cartosat",
+      "scene_references": {
+        "scene_id": "geospatial_reasoning_scene_008",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.58,
+          12.88,
+          76.67999999999999,
+          12.98
+        ]
+      },
+      "ground_truth": {
+        "target_class": "geospatial_reasoning_class_2",
+        "expected_number": 22.0,
+        "unit": "pct",
+        "expected_confidence": 0.9299999999999999
+      }
+    },
+    {
+      "item_id": "SQB-GEOS-009",
+      "category": "geospatial_reasoning",
+      "modality": "optical",
+      "input_query": "Calculate distance from the river bank to the expanding urban perimeter. (Sample #9)",
+      "dataset_source": "USGS Landsat-8 / Cartosat",
+      "scene_references": {
+        "scene_id": "geospatial_reasoning_scene_009",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.59,
+          12.89,
+          76.69,
+          12.99
+        ]
+      },
+      "ground_truth": {
+        "target_class": "geospatial_reasoning_class_0",
+        "expected_number": 23.5,
+        "unit": "pct",
+        "expected_confidence": 0.94
+      }
+    },
+    {
+      "item_id": "SQB-GEOS-010",
+      "category": "geospatial_reasoning",
+      "modality": "optical",
+      "input_query": "Calculate distance from the river bank to the expanding urban perimeter. (Sample #10)",
+      "dataset_source": "USGS Landsat-8 / Cartosat",
+      "scene_references": {
+        "scene_id": "geospatial_reasoning_scene_010",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.6,
+          12.9,
+          76.69999999999999,
+          13.0
+        ]
+      },
+      "ground_truth": {
+        "target_class": "geospatial_reasoning_class_1",
+        "expected_number": 25.0,
+        "unit": "pct",
+        "expected_confidence": 0.85
+      }
+    },
+    {
+      "item_id": "SQB-GEOS-011",
+      "category": "geospatial_reasoning",
+      "modality": "optical",
+      "input_query": "Calculate distance from the river bank to the expanding urban perimeter. (Sample #11)",
+      "dataset_source": "USGS Landsat-8 / Cartosat",
+      "scene_references": {
+        "scene_id": "geospatial_reasoning_scene_011",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.61,
+          12.91,
+          76.71,
+          13.01
+        ]
+      },
+      "ground_truth": {
+        "target_class": "geospatial_reasoning_class_2",
+        "expected_number": 26.5,
+        "unit": "pct",
+        "expected_confidence": 0.86
+      }
+    },
+    {
+      "item_id": "SQB-GEOS-012",
+      "category": "geospatial_reasoning",
+      "modality": "optical",
+      "input_query": "Calculate distance from the river bank to the expanding urban perimeter. (Sample #12)",
+      "dataset_source": "USGS Landsat-8 / Cartosat",
+      "scene_references": {
+        "scene_id": "geospatial_reasoning_scene_012",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.62,
+          12.92,
+          76.72,
+          13.02
+        ]
+      },
+      "ground_truth": {
+        "target_class": "geospatial_reasoning_class_0",
+        "expected_number": 28.0,
+        "unit": "pct",
+        "expected_confidence": 0.87
+      }
+    },
+    {
+      "item_id": "SQB-GEOS-013",
+      "category": "geospatial_reasoning",
+      "modality": "optical",
+      "input_query": "Calculate distance from the river bank to the expanding urban perimeter. (Sample #13)",
+      "dataset_source": "USGS Landsat-8 / Cartosat",
+      "scene_references": {
+        "scene_id": "geospatial_reasoning_scene_013",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.63,
+          12.930000000000001,
+          76.72999999999999,
+          13.030000000000001
+        ]
+      },
+      "ground_truth": {
+        "target_class": "geospatial_reasoning_class_1",
+        "expected_number": 29.5,
+        "unit": "pct",
+        "expected_confidence": 0.88
+      }
+    },
+    {
+      "item_id": "SQB-GEOS-014",
+      "category": "geospatial_reasoning",
+      "modality": "optical",
+      "input_query": "Calculate distance from the river bank to the expanding urban perimeter. (Sample #14)",
+      "dataset_source": "USGS Landsat-8 / Cartosat",
+      "scene_references": {
+        "scene_id": "geospatial_reasoning_scene_014",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.64,
+          12.940000000000001,
+          76.74,
+          13.040000000000001
+        ]
+      },
+      "ground_truth": {
+        "target_class": "geospatial_reasoning_class_2",
+        "expected_number": 31.0,
+        "unit": "pct",
+        "expected_confidence": 0.89
+      }
+    },
+    {
+      "item_id": "SQB-GEOS-015",
+      "category": "geospatial_reasoning",
+      "modality": "optical",
+      "input_query": "Calculate distance from the river bank to the expanding urban perimeter. (Sample #15)",
+      "dataset_source": "USGS Landsat-8 / Cartosat",
+      "scene_references": {
+        "scene_id": "geospatial_reasoning_scene_015",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.65,
+          12.950000000000001,
+          76.75,
+          13.05
+        ]
+      },
+      "ground_truth": {
+        "target_class": "geospatial_reasoning_class_0",
+        "expected_number": 32.5,
+        "unit": "pct",
+        "expected_confidence": 0.9
+      }
+    },
+    {
+      "item_id": "SQB-MULT-001",
+      "category": "multistep_agent",
+      "modality": "multimodal",
+      "input_query": "Run end-to-end investigation: validate imagery, detect change, verify with SAR, and generate dossier. (Sample #1)",
+      "dataset_source": "ISRO SAC Problem Statement 26167 Scenarios",
+      "scene_references": {
+        "scene_id": "multistep_agent_scene_001",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.51,
+          12.81,
+          76.61,
+          12.91
+        ]
+      },
+      "ground_truth": {
+        "target_class": "multistep_agent_class_1",
+        "expected_number": 11.5,
+        "unit": "pct",
+        "expected_confidence": 0.86
+      }
+    },
+    {
+      "item_id": "SQB-MULT-002",
+      "category": "multistep_agent",
+      "modality": "multimodal",
+      "input_query": "Run end-to-end investigation: validate imagery, detect change, verify with SAR, and generate dossier. (Sample #2)",
+      "dataset_source": "ISRO SAC Problem Statement 26167 Scenarios",
+      "scene_references": {
+        "scene_id": "multistep_agent_scene_002",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.52,
+          12.82,
+          76.61999999999999,
+          12.92
+        ]
+      },
+      "ground_truth": {
+        "target_class": "multistep_agent_class_2",
+        "expected_number": 13.0,
+        "unit": "pct",
+        "expected_confidence": 0.87
+      }
+    },
+    {
+      "item_id": "SQB-MULT-003",
+      "category": "multistep_agent",
+      "modality": "multimodal",
+      "input_query": "Run end-to-end investigation: validate imagery, detect change, verify with SAR, and generate dossier. (Sample #3)",
+      "dataset_source": "ISRO SAC Problem Statement 26167 Scenarios",
+      "scene_references": {
+        "scene_id": "multistep_agent_scene_003",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.53,
+          12.83,
+          76.63,
+          12.93
+        ]
+      },
+      "ground_truth": {
+        "target_class": "multistep_agent_class_0",
+        "expected_number": 14.5,
+        "unit": "pct",
+        "expected_confidence": 0.88
+      }
+    },
+    {
+      "item_id": "SQB-MULT-004",
+      "category": "multistep_agent",
+      "modality": "multimodal",
+      "input_query": "Run end-to-end investigation: validate imagery, detect change, verify with SAR, and generate dossier. (Sample #4)",
+      "dataset_source": "ISRO SAC Problem Statement 26167 Scenarios",
+      "scene_references": {
+        "scene_id": "multistep_agent_scene_004",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.54,
+          12.84,
+          76.64,
+          12.94
+        ]
+      },
+      "ground_truth": {
+        "target_class": "multistep_agent_class_1",
+        "expected_number": 16.0,
+        "unit": "pct",
+        "expected_confidence": 0.89
+      }
+    },
+    {
+      "item_id": "SQB-MULT-005",
+      "category": "multistep_agent",
+      "modality": "multimodal",
+      "input_query": "Run end-to-end investigation: validate imagery, detect change, verify with SAR, and generate dossier. (Sample #5)",
+      "dataset_source": "ISRO SAC Problem Statement 26167 Scenarios",
+      "scene_references": {
+        "scene_id": "multistep_agent_scene_005",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.55,
+          12.850000000000001,
+          76.64999999999999,
+          12.950000000000001
+        ]
+      },
+      "ground_truth": {
+        "target_class": "multistep_agent_class_2",
+        "expected_number": 17.5,
+        "unit": "pct",
+        "expected_confidence": 0.9
+      }
+    },
+    {
+      "item_id": "SQB-MULT-006",
+      "category": "multistep_agent",
+      "modality": "multimodal",
+      "input_query": "Run end-to-end investigation: validate imagery, detect change, verify with SAR, and generate dossier. (Sample #6)",
+      "dataset_source": "ISRO SAC Problem Statement 26167 Scenarios",
+      "scene_references": {
+        "scene_id": "multistep_agent_scene_006",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.56,
+          12.860000000000001,
+          76.66,
+          12.96
+        ]
+      },
+      "ground_truth": {
+        "target_class": "multistep_agent_class_0",
+        "expected_number": 19.0,
+        "unit": "pct",
+        "expected_confidence": 0.9099999999999999
+      }
+    },
+    {
+      "item_id": "SQB-MULT-007",
+      "category": "multistep_agent",
+      "modality": "multimodal",
+      "input_query": "Run end-to-end investigation: validate imagery, detect change, verify with SAR, and generate dossier. (Sample #7)",
+      "dataset_source": "ISRO SAC Problem Statement 26167 Scenarios",
+      "scene_references": {
+        "scene_id": "multistep_agent_scene_007",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.57,
+          12.870000000000001,
+          76.66999999999999,
+          12.97
+        ]
+      },
+      "ground_truth": {
+        "target_class": "multistep_agent_class_1",
+        "expected_number": 20.5,
+        "unit": "pct",
+        "expected_confidence": 0.9199999999999999
+      }
+    },
+    {
+      "item_id": "SQB-MULT-008",
+      "category": "multistep_agent",
+      "modality": "multimodal",
+      "input_query": "Run end-to-end investigation: validate imagery, detect change, verify with SAR, and generate dossier. (Sample #8)",
+      "dataset_source": "ISRO SAC Problem Statement 26167 Scenarios",
+      "scene_references": {
+        "scene_id": "multistep_agent_scene_008",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.58,
+          12.88,
+          76.67999999999999,
+          12.98
+        ]
+      },
+      "ground_truth": {
+        "target_class": "multistep_agent_class_2",
+        "expected_number": 22.0,
+        "unit": "pct",
+        "expected_confidence": 0.9299999999999999
+      }
+    },
+    {
+      "item_id": "SQB-MULT-009",
+      "category": "multistep_agent",
+      "modality": "multimodal",
+      "input_query": "Run end-to-end investigation: validate imagery, detect change, verify with SAR, and generate dossier. (Sample #9)",
+      "dataset_source": "ISRO SAC Problem Statement 26167 Scenarios",
+      "scene_references": {
+        "scene_id": "multistep_agent_scene_009",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.59,
+          12.89,
+          76.69,
+          12.99
+        ]
+      },
+      "ground_truth": {
+        "target_class": "multistep_agent_class_0",
+        "expected_number": 23.5,
+        "unit": "pct",
+        "expected_confidence": 0.94
+      }
+    },
+    {
+      "item_id": "SQB-MULT-010",
+      "category": "multistep_agent",
+      "modality": "multimodal",
+      "input_query": "Run end-to-end investigation: validate imagery, detect change, verify with SAR, and generate dossier. (Sample #10)",
+      "dataset_source": "ISRO SAC Problem Statement 26167 Scenarios",
+      "scene_references": {
+        "scene_id": "multistep_agent_scene_010",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.6,
+          12.9,
+          76.69999999999999,
+          13.0
+        ]
+      },
+      "ground_truth": {
+        "target_class": "multistep_agent_class_1",
+        "expected_number": 25.0,
+        "unit": "pct",
+        "expected_confidence": 0.85
+      }
+    },
+    {
+      "item_id": "SQB-MULT-011",
+      "category": "multistep_agent",
+      "modality": "multimodal",
+      "input_query": "Run end-to-end investigation: validate imagery, detect change, verify with SAR, and generate dossier. (Sample #11)",
+      "dataset_source": "ISRO SAC Problem Statement 26167 Scenarios",
+      "scene_references": {
+        "scene_id": "multistep_agent_scene_011",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.61,
+          12.91,
+          76.71,
+          13.01
+        ]
+      },
+      "ground_truth": {
+        "target_class": "multistep_agent_class_2",
+        "expected_number": 26.5,
+        "unit": "pct",
+        "expected_confidence": 0.86
+      }
+    },
+    {
+      "item_id": "SQB-MULT-012",
+      "category": "multistep_agent",
+      "modality": "multimodal",
+      "input_query": "Run end-to-end investigation: validate imagery, detect change, verify with SAR, and generate dossier. (Sample #12)",
+      "dataset_source": "ISRO SAC Problem Statement 26167 Scenarios",
+      "scene_references": {
+        "scene_id": "multistep_agent_scene_012",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.62,
+          12.92,
+          76.72,
+          13.02
+        ]
+      },
+      "ground_truth": {
+        "target_class": "multistep_agent_class_0",
+        "expected_number": 28.0,
+        "unit": "pct",
+        "expected_confidence": 0.87
+      }
+    },
+    {
+      "item_id": "SQB-MULT-013",
+      "category": "multistep_agent",
+      "modality": "multimodal",
+      "input_query": "Run end-to-end investigation: validate imagery, detect change, verify with SAR, and generate dossier. (Sample #13)",
+      "dataset_source": "ISRO SAC Problem Statement 26167 Scenarios",
+      "scene_references": {
+        "scene_id": "multistep_agent_scene_013",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.63,
+          12.930000000000001,
+          76.72999999999999,
+          13.030000000000001
+        ]
+      },
+      "ground_truth": {
+        "target_class": "multistep_agent_class_1",
+        "expected_number": 29.5,
+        "unit": "pct",
+        "expected_confidence": 0.88
+      }
+    },
+    {
+      "item_id": "SQB-MULT-014",
+      "category": "multistep_agent",
+      "modality": "multimodal",
+      "input_query": "Run end-to-end investigation: validate imagery, detect change, verify with SAR, and generate dossier. (Sample #14)",
+      "dataset_source": "ISRO SAC Problem Statement 26167 Scenarios",
+      "scene_references": {
+        "scene_id": "multistep_agent_scene_014",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.64,
+          12.940000000000001,
+          76.74,
+          13.040000000000001
+        ]
+      },
+      "ground_truth": {
+        "target_class": "multistep_agent_class_2",
+        "expected_number": 31.0,
+        "unit": "pct",
+        "expected_confidence": 0.89
+      }
+    },
+    {
+      "item_id": "SQB-MULT-015",
+      "category": "multistep_agent",
+      "modality": "multimodal",
+      "input_query": "Run end-to-end investigation: validate imagery, detect change, verify with SAR, and generate dossier. (Sample #15)",
+      "dataset_source": "ISRO SAC Problem Statement 26167 Scenarios",
+      "scene_references": {
+        "scene_id": "multistep_agent_scene_015",
+        "resolution_m": 10.0,
+        "crs": "EPSG:32643",
+        "bbox": [
+          76.65,
+          12.950000000000001,
+          76.75,
+          13.05
+        ]
+      },
+      "ground_truth": {
+        "target_class": "multistep_agent_class_0",
+        "expected_number": 32.5,
+        "unit": "pct",
+        "expected_confidence": 0.9
+      }
+    }
+  ]
+}
