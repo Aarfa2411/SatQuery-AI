@@ -47,7 +47,7 @@ class FallbackDatasetReader:
     def tags(self) -> dict[str, str]:
         return {}
 
-    def read(self, band: int | None = None) -> np.ndarray:
+    def read(self, band: int | list[int] | None = None) -> np.ndarray:
         arr = np.array(self.img)
         if arr.ndim == 2:
             arr = np.expand_dims(arr, axis=0)
@@ -55,7 +55,10 @@ class FallbackDatasetReader:
             arr = np.transpose(arr, (2, 0, 1)) # HWC -> CHW
 
         if band is not None:
-            if band <= arr.shape[0]:
+            if isinstance(band, (list, tuple)):
+                indices = [b - 1 for b in band if 0 < b <= arr.shape[0]]
+                return arr[indices] if indices else arr[:len(band)]
+            if isinstance(band, int) and band <= arr.shape[0]:
                 return arr[band - 1]
             return arr[0]
         return arr
