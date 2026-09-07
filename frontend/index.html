@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SatQuery AI — Agentic Earth Observation & Road Intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Space+Grotesk:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body class="dark-theme">
+
+    <!-- ================================================================= -->
+    <!-- 1. LANDING PAGE EXPERIENCE (Identical to Aryabhata-Cartographers)   -->
+    <!-- ================================================================= -->
+    <div id="landingView" class="landing-view">
+        
+        <!-- 3D WebGL Earth Globe Mount -->
+        <div id="globeMount" class="globe-mount"></div>
+
+        <!-- Scanline Grid Overlay -->
+        <div class="scanline-overlay"></div>
+
+        <!-- HUD Layer -->
+        <div class="hud-layer">
+            <!-- Top HUD Bar -->
+            <header class="landing-hud-header">
+                <button id="audioToggleBtn" class="audio-btn" type="button" aria-label="Toggle ambient audio">
+                    <span id="audioDot" class="audio-dot"></span>
+                    <span id="audioLabel">AUDIO OFF</span>
+                </button>
+
+                <span class="hud-brand">SATQUERY</span>
+
+                <span class="hud-status">SYS: <span id="sysStatus">STANDBY</span></span>
+            </header>
+
+            <!-- Scroll-driven Content Panels -->
+            <div class="panels-viewport">
+                <!-- Panel 0: Welcome Hero -->
+                <div id="panel0" class="story-panel panel-hero">
+                    <span class="hero-tag">■ SATQUERY AI · GEOSPATIAL INTELLIGENCE</span>
+                    <h1 class="hero-title">AI-Powered Satellite Road Intelligence</h1>
+                    <span class="hero-scroll-hint">SCROLL DOWN TO EXPLORE &darr;</span>
+                </div>
+
+                <!-- Panel 1: Satellite Input (Left card) -->
+                <div id="panel1" class="story-panel panel-left card-glass">
+                    <span class="panel-step-tag orange-tag">01 / INPUT DATASET</span>
+                    <h2>Multispectral Feeds</h2>
+                    <p>Feed raw Sentinel-2 or Landsat imagery into the processing buffer, specifying geographical bounds to trace routes under regional topological limits.</p>
+                </div>
+
+                <!-- Panel 2: Deep Extraction (Right card) -->
+                <div id="panel2" class="story-panel panel-right card-glass">
+                    <span class="panel-step-tag cyan-tag">02 / NEURAL VISION</span>
+                    <h2>SegFormer Road Mask</h2>
+                    <p>Deep transformer segments pixel columns, identifying road pixels vs background cover to reconstruct corridors beneath tree occlusions and cloud shadows.</p>
+                </div>
+
+                <!-- Panel 3: Graph Simulation & Enter (Center card) -->
+                <div id="panel3" class="story-panel panel-center">
+                    <div class="card-glass center-card-box">
+                        <span class="panel-step-tag cyan-tag">03 / VULNERABILITY MODEL</span>
+                        <h2>Structural Criticality</h2>
+                        <p>Graph construction resolves intersections into nodes and segments into edges, ranking route bottlenecks via betweenness and closeness metrics.</p>
+                        <div class="enter-btn-wrap">
+                            <button id="btnEnterExperience" class="enter-btn" type="button">
+                                <span>ENTER CONSOLE</span>
+                                <span class="pulse-orange-dot"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Storytelling HUD -->
+            <footer class="landing-hud-footer">
+                <div class="footer-blurb">
+                    Across 2026, SatQuery fused satellite, aerial, and street-level imagery to chart the unseen resilience of transportation networks.
+                </div>
+                <div class="footer-share" id="shareBtn">
+                    SHARE &#8599;
+                </div>
+            </footer>
+        </div>
+
+        <!-- Telemetry HUD Card (active during transition dive) -->
+        <div id="telemetryDrawer" class="telemetry-drawer">
+            <div class="telemetry-row">
+                <span>ORBITSCAN:</span>
+                <span id="telemetryStatus" class="telemetry-highlight">STANDBY</span>
+            </div>
+            <div class="telemetry-row">
+                <span>LOCATION:</span>
+                <span id="telemetryLocation">LOCAL CONSOLE</span>
+            </div>
+            <div class="telemetry-row coords-row" id="telemetryCoordsRow" style="display: none;">
+                <span>COORDINATES:</span>
+                <span id="telemetryCoords">0.00000°N, 0.00000°E</span>
+            </div>
+            <div class="telemetry-progress-track">
+                <div id="telemetryProgressBar" class="telemetry-progress-fill"></div>
+            </div>
+        </div>
+
+        <!-- Hidden Scroll Driver (360vh) -->
+        <div id="scrollDriver" class="scroll-driver">
+            <div class="scroll-spacer"></div>
+        </div>
+    </div>
+
+
+    <!-- ================================================================= -->
+    <!-- 2. COPILOT DASHBOARD & INVESTIGATION CONSOLE                       -->
+    <!-- ================================================================= -->
+    <div id="dashboardView" class="dashboard-view dashboard-hidden">
+        <header class="app-header">
+            <div class="logo-area">
+                <button id="btnBackToOrbit" class="orbit-back-btn" title="Return to 3D Orbit View">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    <span>Orbit View</span>
+                </button>
+                <div class="logo-badge">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <path d="M12 3v18"></path>
+                        <path d="M3 12h18"></path>
+                        <circle cx="12" cy="12" r="4" fill="currentColor" opacity="0.3"></circle>
+                    </svg>
+                </div>
+                <div>
+                    <h1>SatQuery AI</h1>
+                    <span class="sub-tag">Agentic Remote-Sensing Intelligence Copilot · ISRO SIH26167</span>
+                </div>
+            </div>
+            <div class="header-status">
+                <span class="sensor-badge" id="sensorBadge">ISRO Earth-Observation Standard</span>
+                <span class="mode-badge" id="modeBadge">Active Mode: Heuristic / Auto</span>
+            </div>
+        </header>
+
+        <main class="app-layout">
+            <!-- Left Panel: Ingestion & Chat -->
+            <section class="chat-panel">
+                <div class="card upload-card">
+                    <h3>1. Ingestion & Co-Registration</h3>
+                    <div class="upload-dropzone" id="dropzone">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        <p>Upload GeoTIFFs (Single, Bi-temporal, or Optical+SAR)</p>
+                        <span class="upload-hint">Auto-checks CRS, bounds overlap, and erodes warp border artifacts</span>
+                        <input type="file" id="fileInput" multiple accept=".tif,.tiff,.png,.jpg" style="display:none;">
+                    </div>
+                    <div class="validation-status" id="validationStatus">
+                        <span class="status-dot"></span> <span id="validationText">No imagery loaded. Using simulated Cartosat-2S & RISAT demo session.</span>
+                    </div>
+                </div>
+
+                <div class="card chat-card">
+                    <h3>2. Conversational Satellite Intelligence</h3>
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message system-message">
+                            <strong>SatQuery Assistant:</strong> Welcome! Upload your satellite imagery or ask any Earth-observation question below.
+                        </div>
+                    </div>
+
+                    <form id="queryForm" class="query-form">
+                        <input type="text" id="queryInput" placeholder="e.g. 'Use optical and SAR to identify flood inundation and new buildings'" required>
+                        <button type="submit" id="submitBtn">
+                            <span>Investigate</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </form>
+
+                    <div class="quick-prompts">
+                        <button class="pill-btn" onclick="setPrompt('Describe the land cover and major objects visible in this image.')">Describe Land Cover</button>
+                        <button class="pill-btn" onclick="setPrompt('What changed between T1 and T2? Suppress seasonal pseudo-changes.')">Bi-Temporal Change</button>
+                        <button class="pill-btn" onclick="setPrompt('Assess ground inundation with SAR microwave penetration through cloud cover.')">Optical + SAR Fusion</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Center Panel: Map & Comparison Slider -->
+            <section class="map-panel card">
+                <div class="panel-header">
+                    <h3>Visual Evidence & Grounded Overlays</h3>
+                    <div class="map-controls">
+                        <button class="toggle-btn active" id="btnOverlay">Mask Overlays</button>
+                        <button class="toggle-btn" id="btnSlider">Before/After Slider</button>
+                    </div>
+                </div>
+                
+                <div id="mapContainer" class="map-container">
+                    <div class="simulated-map" id="simulatedMap">
+                        <div class="map-layer optical-layer" id="layerT1">
+                            <div class="water-box" id="waterOverlay"></div>
+                            <div class="change-box" id="changeOverlay"></div>
+                            <div class="urban-box" id="urbanOverlay"></div>
+                        </div>
+                        <div class="map-slider-handle" id="sliderHandle"></div>
+                    </div>
+                </div>
+
+                <div class="export-bar">
+                    <div class="hash-display">
+                        <span class="hash-label">Run Signature (SHA-256):</span>
+                        <span class="hash-val" id="sigHash">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</span>
+                    </div>
+                    <div class="export-actions">
+                        <button class="export-btn" id="btnExportPdf">Export PDF Report</button>
+                        <button class="export-btn secondary" id="btnExportGeoJson">Export GeoJSON</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Panel: ReAct Investigation Trace Drawer -->
+            <aside class="trace-panel card">
+                <div class="panel-header">
+                    <h3>Auditable Investigation Trace</h3>
+                    <span class="badge-confidence" id="finalConfidence">Confidence: --%</span>
+                </div>
+                <p class="trace-sub">Step-by-step ReAct thought, tool selection rationale, and observation evidence.</p>
+                
+                <div class="trace-steps" id="traceSteps">
+                    <div class="trace-empty">No active query execution trace. Ask a question to view real-time ReAct planning.</div>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

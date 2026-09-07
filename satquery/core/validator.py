@@ -113,11 +113,22 @@ def check_spatial_overlap(info_t1: dict, info_t2: dict) -> None:
 
     NOTE: Assumes both images share a CRS (or have already been matched).
     """
-    b1 = info_t1["bounds"]   # rasterio.coords.BoundingBox
+    b1 = info_t1["bounds"]
     b2 = info_t2["bounds"]
 
-    x_overlap = b1.left < b2.right and b2.left < b1.right
-    y_overlap = b1.bottom < b2.top  and b2.bottom < b1.top
+    # Support either rasterio BoundingBox or (left, bottom, right, top) tuple
+    b1_left = getattr(b1, "left", b1[0])
+    b1_bottom = getattr(b1, "bottom", b1[1])
+    b1_right = getattr(b1, "right", b1[2])
+    b1_top = getattr(b1, "top", b1[3])
+
+    b2_left = getattr(b2, "left", b2[0])
+    b2_bottom = getattr(b2, "bottom", b2[1])
+    b2_right = getattr(b2, "right", b2[2])
+    b2_top = getattr(b2, "top", b2[3])
+
+    x_overlap = b1_left < b2_right and b2_left < b1_right
+    y_overlap = b1_bottom < b2_top and b2_bottom < b1_top
 
     if not (x_overlap and y_overlap):
         raise ValidationError(
@@ -224,6 +235,40 @@ def check_temporal_order(
             f"T1 ({dt1.date()}) must precede T2 ({dt2.date()}). "
             "Swap the input images and retry.",
         )
+
+
+# ---------------------------------------------------------------------------
+# Numerical stability & nodata checks (Adversarial)
+# ---------------------------------------------------------------------------
+
+def check_not_all_nodata(array: np.ndarray, nodata_val: float | None = None) -> None:
+    """
+    Raise :class:`ValidationError` if the array consists entirely of nodata,
+    zeros, or NaNs.
+    """
+    if array.size == 0:
+        raise ValidationError("EMPTY_ARRAY", "Input raster array contains 0 elements.")
+
+    if np.isnan(array).all():
+        raise ValidationError("ALL_NODATA", "Raster data contains only NaN values.")
+
+    if nodata_val is not None:
+        valid_mask = (array != nodata_val) & ~np.isnan(array)
+        if not np.any(valid_mask):
+            raise ValidationError("ALL_NODATA", f"Raster data consists entirely of nodata value ({nodata_val}).")
+
+    # Check if completely unvarying zero
+    if (array == 0).all():
+        raise ValidationError("ALL_ZERO", "Raster data contains only zeros.")
+
+
+def check_raster_array_finite(array: np.ndarray) -> None:
+    """
+    Check that the array contains valid finite numbers (rejects Inf or all-NaN).
+    """
+    if np.isinf(array).any():
+        raise ValidationError("NON_FINITE_VALUES", "Raster array contains infinite (Inf) values.")
+
 
 
 # ---------------------------------------------------------------------------

@@ -1,0 +1,26 @@
+{
+  "type": "FeatureCollection",
+  "satquery_audit": {
+    "session_id": "export_sess_test",
+    "query": "Identify water bodies.",
+    "final_answer": "Identified inland water bodies and reservoir regions matching 'reservoir, water body, river, ocean, lake'. Water spectral absorption is distinct across NIR bands.",
+    "confidence": 0.79,
+    "sensor_calibration_badge": "ISRO Earth-Observation Standard",
+    "run_signature_hash": "7b1b31b95e814a7a61278ee5ec14a1dffd1ace16be5bac94ddaa9b645722f679",
+    "report_tamper_token": "bb1a45f3673195aadba4a3feb697f15b8730cccb450f3fef73aedfc75c8786c5",
+    "generated_at": "2026-09-07T09:58:41.635602+00:00"
+  },
+  "features": [],
+  "bboxes": [
+    {
+      "label": "Water Body",
+      "box": [
+        0.25,
+        0.3,
+        0.65,
+        0.75
+      ],
+      "score": 0.89
+    }
+  ]
+}

@@ -14,5 +14,33 @@ venv/
 ENV/
 
 # OS specific
+# Python & Virtual Environments
+.venv/
+venv/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Model Weights & Large Checkpoints (Charter: outside Git)
+weights/
+models/checkpoints/
+*.onnx
+*.pth
+*.pt
+*.bin
+*.h5
+
+# Local Storage, Exports & Demo Artifacts
+backend/storage/uploads/*
+!backend/storage/uploads/.gitkeep
+backend/storage/aligned/*
+!backend/storage/aligned/.gitkeep
+backend/storage/exports/*
+!backend/storage/exports/.gitkeep
+demo_data/*/output/
+
+# OS Specific
 .DS_Store
 Thumbs.db
