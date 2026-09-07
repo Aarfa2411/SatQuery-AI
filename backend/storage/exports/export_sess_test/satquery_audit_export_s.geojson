@@ -3,24 +3,50 @@
   "satquery_audit": {
     "session_id": "export_sess_test",
     "query": "Identify water bodies.",
-    "final_answer": "Identified inland water bodies and reservoir regions matching 'lake, reservoir, river, ocean, water body'. Water spectral absorption is distinct across NIR bands.",
-    "confidence": 0.79,
+    "final_answer": "Identified inland water bodies and reservoir regions matching 'reservoir, water body, lake, ocean, river'. Water spectral absorption is distinct across NIR bands.",
+    "confidence": 0.77,
     "sensor_calibration_badge": "ISRO Earth-Observation Standard",
-    "run_signature_hash": "98e9b3fc127afb699d11b6b38b3b8ce6f82ecee9eb95f53d6b04a0432eb2bf3a",
-    "report_tamper_token": "7be59a7deb75b306d59b33257a676e98219b07fe84b0ab1430e8e0af4f6e3ef0",
-    "generated_at": "2026-09-02T10:41:12.987683+00:00"
+    "run_signature_hash": "3d5608954e44d5d88759029fc2bf74aa856d6f1c2f993dfbd3467915e4d5a00b",
+    "report_tamper_token": "18b213001dcc7fbf33eab02f4d3ad05c605f10c6f656110af09e5bd15248f15a",
+    "generated_at": "2026-09-07T10:06:39.075555+00:00"
   },
-  "features": [],
-  "bboxes": [
+  "features": [
     {
-      "label": "Water Body",
-      "box": [
-        0.25,
-        0.3,
-        0.65,
-        0.75
-      ],
-      "score": 0.89
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.2,
+              16.0
+            ],
+            [
+              48.0,
+              16.0
+            ],
+            [
+              48.0,
+              41.6
+            ],
+            [
+              19.2,
+              41.6
+            ],
+            [
+              19.2,
+              16.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "label": "Water Body",
+        "score": 0.5,
+        "source": "vlm_grounding_engine",
+        "crs": "EPSG:4326"
+      }
     }
-  ]
+  ],
+  "bboxes": []
 }

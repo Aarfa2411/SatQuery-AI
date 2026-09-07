@@ -27,6 +27,14 @@ class Settings(BaseSettings):
     ALLOW_GPU: bool = True
     DEFAULT_CRS: str = "EPSG:4326"
     TARGET_OPTICAL_RES_M: float = 0.65  # Cartosat-2S native GSD (m)
+
+    # VLM Native Feature & Gated Fusion settings
+    VLM_FEATURE_ENABLED: bool = True
+    VLM_FUSION_STRATEGY: str = "gated"
+    VLM_CONFIDENCE_THRESHOLD: float = 0.70
+    VLM_SUPPRESS_SPECKLE: bool = True
+    VLM_CIRCUIT_BREAKER_MAX_ERRORS: int = 5
+    VLM_GATE_DEFAULT: float = 0.50
     
     model_config = {"env_file": ".env", "extra": "ignore"}
 
