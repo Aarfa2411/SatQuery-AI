@@ -154,6 +154,9 @@ def extract_index(
     }
     _sar_default: dict[str, int] = {"vv": 0, "vh": 1}
 
+    if hasattr(array, "array"):
+        array = getattr(array, "array")
+
     n_bands = array.shape[0]
     bm = band_map or {}
 
