@@ -1,0 +1,20 @@
+[
+  {
+    "scenario": "flood",
+    "t1_path": "./demo_data\\flood\\T1.tif",
+    "t2_path": "./demo_data\\flood\\T2.tif",
+    "meta_path": "./demo_data\\flood\\scenario_meta.json"
+  },
+  {
+    "scenario": "deforestation",
+    "t1_path": "./demo_data\\deforestation\\T1.tif",
+    "t2_path": "./demo_data\\deforestation\\T2.tif",
+    "meta_path": "./demo_data\\deforestation\\scenario_meta.json"
+  },
+  {
+    "scenario": "urban",
+    "t1_path": "./demo_data\\urban\\T1.tif",
+    "t2_path": "./demo_data\\urban\\T2.tif",
+    "meta_path": "./demo_data\\urban\\scenario_meta.json"
+  }
+]
