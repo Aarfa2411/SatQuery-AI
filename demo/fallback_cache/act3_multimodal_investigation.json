@@ -1,0 +1,44 @@
+{
+  "task_id": "DEMO-ACT3-MULTIMODAL-INVESTIGATION",
+  "schema_version": "0.2",
+  "status": "real_model",
+  "text_response": "Multimodal investigation resolved cloud obstruction over the monsoon flood zone. Optical Sentinel-2 T2 was 82% obscured by dense cumulus cover. ReAct agent dispatched Sentinel-1 C-band SAR specialist. Microwave backscatter differencing penetrated cloud layers, detecting 38.60 ha of newly inundated agricultural land. Disagreement arbitration confirmed true flood boundary with 86.2% decomposed confidence.",
+  "deterministic_numbers": {
+    "optical_cloud_pct": 82.0,
+    "inundated_area_ha": 38.60,
+    "area_ha": 38.60,
+    "area_m2": 386000.0,
+    "backscatter_shift_db": -5.4
+  },
+  "geojson_geometry": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {"zone": "Flood Extent Inundation", "area_ha": 38.60, "sensor": "Sentinel-1 SAR"},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[76.560, 12.820], [76.585, 12.820], [76.585, 12.855], [76.560, 12.855], [76.560, 12.820]]]
+        }
+      }
+    ]
+  },
+  "confidence_score": 0.862,
+  "confidence_breakdown": {
+    "input_quality": 0.72,
+    "model_confidence": 0.94,
+    "evidence_agreement": 0.91,
+    "geospatial_validity": 1.0,
+    "temporal_validity": 0.95,
+    "contradiction_penalty": 0.05
+  },
+  "execution_time_ms": 198.0,
+  "tool_trace": [
+    "GeoValidator",
+    "router.cloud_cover_analyzer",
+    "sar_specialist.lee_filter",
+    "sar_specialist.backscatter_diff",
+    "multimodal.disagreement_arbitrator",
+    "guardrails.numerical_verifier"
+  ]
+}
