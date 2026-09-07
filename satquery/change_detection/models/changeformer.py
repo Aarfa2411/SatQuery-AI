@@ -23,8 +23,16 @@ from typing import Any, Optional
 import numpy as np
 
 from satquery.core.raster_io import RasterData
-from .base import BaseChangeModel, ChangePrediction, ModelStatus
+from .base import (
+    BaseChangeModel,
+    ChangePrediction,
+    DecisionTier,
+    ModelArtifactStatus,
+    RuntimeStatus,
+    ValidationStatus,
+)
 from .classical_adapter import ClassicalSpectralAdapter
+from .pytorch_backend import ChangeFormerPyTorchBackend, compute_file_sha256
 
 logger = logging.getLogger(__name__)
 
@@ -208,8 +216,12 @@ class ChangeFormerAdapter(BaseChangeModel):
                     f"Set fallback_on_missing=True or configure SATQUERY_WEIGHTS_DIR."
                 )
 
-            # Honest fallback tracking
-            logger.info("ChangeFormer weights missing. Engaging ClassicalSpectralAdapter heuristic fallback.")
+            # Honest fallback tracking with explicit visible warning
+            fallback_msg = (
+                f"ChangeFormer checkpoint unavailable at '{self.weights_path}'. "
+                "Execution visibly fell back to ClassicalSpectralAdapter deterministic baseline."
+            )
+            logger.warning(fallback_msg)
             classical = ClassicalSpectralAdapter(default_index="ndvi")
             pred = classical.predict(t1, t2, **kwargs)
             elapsed_ms = round((time.perf_counter() - start_time) * 1000.0, 2)
@@ -218,10 +230,15 @@ class ChangeFormerAdapter(BaseChangeModel):
                 change_mask=pred.change_mask,
                 probability_map=pred.probability_map,
                 model_name=f"{self.name}-Fallback",
-                model_status=ModelStatus.HEURISTIC_FALLBACK,
-                confidence=float(pred.confidence * 0.9),  # Modest discount for fallback
+                artifact_status=ModelArtifactStatus.UNAVAILABLE,
+                runtime_status=RuntimeStatus.INCOMPATIBLE,
+                validation_status=ValidationStatus.UNVALIDATED,
+                decision_tier=DecisionTier.UNCERTAIN,
+                confidence=float(pred.confidence * 0.85),
+                is_fallback=True,
+                fallback_reason=fallback_msg,
                 provenance={
-                    "fallback_reason": f"Checkpoint missing at {self.weights_path}",
+                    "fallback_reason": fallback_msg,
                     "underlying_engine": pred.model_name,
                     "device": "cpu",
                     "latency_ms": elapsed_ms,
@@ -236,9 +253,10 @@ class ChangeFormerAdapter(BaseChangeModel):
         change_mask = prob_map >= self.threshold
         elapsed_ms = round((time.perf_counter() - start_time) * 1000.0, 2)
 
-        # Compute confidence based on margin from decision boundary
-        confidence = float(np.mean(np.abs(prob_map - self.threshold) * 2.0))
-        confidence = float(np.clip(confidence, 0.1, 0.99))
+        # Evidence score based on margin from decision boundary
+        evidence_score = float(np.mean(np.abs(prob_map - self.threshold) * 2.0))
+        evidence_score = float(np.clip(evidence_score, 0.1, 0.99))
+        tier = DecisionTier.VERIFIED if evidence_score >= 0.8 else DecisionTier.PROBABLE
 
         provenance = {
             "checkpoint_path": str(self.weights_path),
@@ -254,7 +272,11 @@ class ChangeFormerAdapter(BaseChangeModel):
             change_mask=change_mask,
             probability_map=prob_map,
             model_name=self.name,
-            model_status=ModelStatus.REAL_MODEL,
-            confidence=confidence,
+            artifact_status=ModelArtifactStatus.REAL_CHECKPOINT,
+            runtime_status=RuntimeStatus.INFERENCE_SUCCESS,
+            validation_status=ValidationStatus.PROVISIONAL_VALIDATION,
+            decision_tier=tier,
+            confidence=evidence_score,
+            is_fallback=False,
             provenance=provenance,
         )
