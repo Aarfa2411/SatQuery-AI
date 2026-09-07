@@ -74,6 +74,7 @@ from .detector import detect_changes
 from .indices import available_indices, extract_index
 from .metrics import build_text_summary, classify_change_direction, compute_area
 from .morphology import clean_mask, get_component_stats, label_components
+from .models import BaseChangeModel, ChangePrediction, ModelStatus, get_change_model
 
 logger = logging.getLogger(__name__)
 
@@ -177,6 +178,8 @@ class ChangeDetector:
         open_radius: int = 2,
         close_radius: int = 3,
         min_area_px: int = 25,
+        model_name: str = "classical",
+        model_weights_path: str | None = None,
     ):
         self.sensor_t1      = sensor_t1.lower()
         self.sensor_t2      = sensor_t2.lower()
@@ -186,6 +189,8 @@ class ChangeDetector:
         self.open_radius    = open_radius
         self.close_radius   = close_radius
         self.min_area_px    = min_area_px
+        self.model_name     = model_name.lower()
+        self.model_weights_path = model_weights_path
 
     # ------------------------------------------------------------------
     # Primary entry point: file paths
@@ -366,26 +371,54 @@ class ChangeDetector:
         ))
         stage += 1
 
-        # --- Stage N: Detect changes (diff + smooth + pseudo-filter + Otsu) ---
+        # --- Stage N: Detect changes (diff + smooth + pseudo-filter + Otsu / Learned Model) ---
         t0 = time.perf_counter()
-        det = detect_changes(
-            idx_t1, idx_t2,
-            smooth_sigma=self.smooth_sigma,
-            suppress_pseudo_changes=self.suppress_pseudo,
-        )
+        model_status_val = ModelStatus.CLASSICAL_ALGORITHM.value
+        model_provenance: dict[str, Any] = {}
+
+        if self.model_name in ("changeformer", "changeformer_v2"):
+            try:
+                change_model = get_change_model(self.model_name, weights_path=self.model_weights_path)
+                pred = change_model.predict(raster_t1, raster_t2)
+                model_status_val = pred.model_status.value
+                model_provenance = pred.provenance
+                raw_mask = pred.change_mask
+                # Classical cross-check baseline
+                det = detect_changes(
+                    idx_t1, idx_t2,
+                    smooth_sigma=self.smooth_sigma,
+                    suppress_pseudo_changes=self.suppress_pseudo,
+                )
+            except Exception as exc:
+                logger.warning("ChangeFormer failed: %s. Falling back to classical baseline.", exc)
+                det = detect_changes(
+                    idx_t1, idx_t2,
+                    smooth_sigma=self.smooth_sigma,
+                    suppress_pseudo_changes=self.suppress_pseudo,
+                )
+                raw_mask = det["change_mask"]
+                model_status_val = ModelStatus.HEURISTIC_FALLBACK.value
+                model_provenance = {"fallback_reason": str(exc)}
+        else:
+            det = detect_changes(
+                idx_t1, idx_t2,
+                smooth_sigma=self.smooth_sigma,
+                suppress_pseudo_changes=self.suppress_pseudo,
+            )
+            raw_mask = det["change_mask"]
+            model_status_val = ModelStatus.CLASSICAL_ALGORITHM.value
+            model_provenance = {"algorithm": "STSF-Otsu-SpectralDiff"}
+
         trace.append(_trace_step(
             stage, "Change Detection",
-            "detector.detect_changes",
-            f"Otsu threshold={det['otsu_threshold']:.4f}. "
-            f"Raw changed pixels (before clean): {det['change_mask'].sum()}. "
+            f"model.{self.model_name}",
+            f"Status: {model_status_val}. Otsu threshold={det['otsu_threshold']:.4f}. "
+            f"Raw changed pixels: {raw_mask.sum()}. "
             f"Pseudo-change pixels suppressed: {det['n_pseudo_removed']}.",
             (time.perf_counter() - t0) * 1000,
             why=(
-                "Pseudo-change suppression removes radiometric-drift artefacts "
-                "(different sun angles, atmospheric conditions between T1 and T2) "
-                "that produce false positives in naive differencing."
-                if self.suppress_pseudo else
-                "Pseudo-change suppression disabled by configuration."
+                "Combines learned representation and/or pseudo-change suppression to eliminate "
+                "radiometric-drift artefacts between T1 and T2."
             ),
         ))
         stage += 1
@@ -393,7 +426,7 @@ class ChangeDetector:
         # --- Stage N: Morphological cleaning ---
         t0 = time.perf_counter()
         cleaned_mask = clean_mask(
-            det["change_mask"],
+            raw_mask,
             open_radius=self.open_radius,
             close_radius=self.close_radius,
             min_area_px=self.min_area_px,
@@ -450,13 +483,11 @@ class ChangeDetector:
             cleaned_mask, raster_t1, label=direction, min_area_px=self.min_area_px
         )
         tf = raster_t1.meta["transform"]
-        tl = tf * (0, 0)
-        br = tf * (raster_t1.width, raster_t1.height)
-        bounds = tl, br
-        # Flatten bounds
-        b0x, b0y = bounds[0][0], bounds[0][1]
-        b1x, b1y = bounds[1][0], bounds[1][1]
-        bounds_flat = (min(b0x, b1x), min(b0y, b1y), max(b0x, b1x), max(b0y, b1y))
+        minx = min(tf.c, tf.c + tf.a * raster_t1.width)
+        maxx = max(tf.c, tf.c + tf.a * raster_t1.width)
+        miny = min(tf.f, tf.f + tf.e * raster_t1.height)
+        maxy = max(tf.f, tf.f + tf.e * raster_t1.height)
+        bounds_flat = (minx, miny, maxx, maxy)
         poly_warnings = check_polygons_in_bounds(geojson, bounds_flat)
         warnings.extend(poly_warnings)
         trace.append(_trace_step(
@@ -496,10 +527,31 @@ class ChangeDetector:
         total_ms = (time.perf_counter() - total_t0) * 1000
 
         result: dict[str, Any] = {
+            # GeoCV Lead Charter Section 6 core contract
+            "change_type":           direction,
+            "confidence":            conf_score,
+            "changed_area_m2":       float(area_metrics["area_m2"]),
+            "changed_area_ha":       float(area_metrics["area_ha"]),
+            "change_percentage":     float(area_metrics["pct_changed"]),
+            "geometry":              geojson,
+            "supporting_evidence": {
+                "model_name":         self.model_name,
+                "model_status":       model_status_val,
+                "spectral_index":     primary_index,
+                "otsu_threshold":     round(float(det["otsu_threshold"]), 5),
+                "n_pseudo_removed":   int(det["n_pseudo_removed"]),
+                "bimodal_separation": round(float(conf_score), 4),
+                "sensor_calibration": _sensor_note(self.sensor_t1, self.sensor_t2),
+                "timestamp_t1":       timestamp_t1,
+                "timestamp_t2":       timestamp_t2,
+                "provenance":         model_provenance,
+            },
+            "warnings":              warnings,
+
+            # Extended fields for backward compatibility
             "status":                "ok" if not warnings else "partial",
             "primary_index":         primary_index,
             "change_direction":      direction,
-            "confidence":            conf_score,
             "confidence_label":      conf_lbl,
             "area_metrics":          area_metrics,
             "n_changed_pixels":      int(cleaned_mask.sum()),
@@ -510,7 +562,6 @@ class ChangeDetector:
             "summary":               summary_text,
             "geojson":               geojson,
             "execution_trace":       trace,
-            "warnings":              warnings,
             "sensor_calibration_note": _sensor_note(self.sensor_t1, self.sensor_t2),
             "total_processing_ms":   round(total_ms, 1),
         }

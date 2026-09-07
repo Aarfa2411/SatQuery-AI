@@ -141,8 +141,10 @@ class ReActAgent:
             image_paths = sorted(list(uploads_dir.glob("*.tif")) + list(uploads_dir.glob("*.tiff")))
 
         if not image_paths:
-            # Fallback if testing without uploads
-            image_paths = [Path("sample_placeholder.tif")]
+            # Fallback if testing without uploads: use sample_data
+            sample_dir = settings.BASE_DIR / "sample_data"
+            sample_files = sorted(list(sample_dir.glob("*.tif")) + list(sample_dir.glob("*.tiff")))
+            image_paths = sample_files if sample_files else [Path("sample_placeholder.tif")]
 
         plan = self._determine_plan(request.query, validation_data)
         trace_steps: list[AgentTraceStep] = []
